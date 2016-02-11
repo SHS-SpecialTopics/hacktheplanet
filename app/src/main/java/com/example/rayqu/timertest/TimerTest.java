@@ -47,7 +47,12 @@ import java.util.List;
 
      private ListView lv;
 
+<<<<<<< HEAD
 //     protected PowerManager.WakeLock mWakeLock;
+=======
+     String thisDoesNothing = "This Does Nothing";
+
+>>>>>>> d71e303f3e8b2d9a5bd9bbac9181a9e144a8e817
 
      MediaPlayer mySound;
 
