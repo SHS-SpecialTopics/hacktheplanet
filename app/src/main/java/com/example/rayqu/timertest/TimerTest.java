@@ -69,6 +69,8 @@ import java.util.List;
              {"Russia", "25915924.43", ""},
              {"SouthAfrica", "13155022.37", ""},
              {"SouthAmerica", "76259784.44", ""}
+             //fucking sweet
+             //cool
 
      };
 
