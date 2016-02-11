@@ -44,6 +44,8 @@ import java.util.List;
 
      private ListView lv;
 
+     String thisDoesNothing = "This Does Nothing";
+
 
      MediaPlayer mySound;
 
