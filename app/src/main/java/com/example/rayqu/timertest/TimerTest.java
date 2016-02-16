@@ -1,11 +1,9 @@
  package com.example.rayqu.timertest;
 
-import android.content.Context;
 import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.PowerManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +11,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -41,16 +38,13 @@ import java.util.List;
      //double midpoint = 5;
      boolean suspended = false;
 
-     double[] trueMid;
+     double trueMid;
 
      //246.8403042
 
      private ListView lv;
 
-
      String thisDoesNothing = "This Does Nothing";
-
-//     protected PowerManager.WakeLock mWakeLock;
 
 
      MediaPlayer mySound;
@@ -68,8 +62,6 @@ import java.util.List;
              {"Russia", "25915924.43", ""},
              {"SouthAfrica", "13155022.37", ""},
              {"SouthAmerica", "76259784.44", ""}
-             //fucking sweet
-             //cool
 
      };
 
@@ -86,20 +78,6 @@ import java.util.List;
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_timer_test);
 
-         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-
-
-         /* will make the screen be always on until this Activity gets destroyed. */
-         //final PowerManager pm = (PowerManager) getSystemService(Context.POWER_SERVICE);
-         //this.mWakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, "My Tag");
-         //this.mWakeLock.acquire();
-
-
-
-
-
-
-
 
          mySound = MediaPlayer.create(this, R.raw.soundeffect);
 
@@ -111,7 +89,7 @@ import java.util.List;
          fab.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
-                 Snackbar.make(view, "This Does Nothing", Snackbar.LENGTH_LONG)
+                 Snackbar.make(view, "This Does Nothing But it Looks Cool", Snackbar.LENGTH_LONG)
                          .setAction("Action", null).show();
              }
          });
@@ -149,16 +127,9 @@ import java.util.List;
 
          lv.setAdapter(arrayAdapter);
 
-         final double trueMid[] = new double[myNumbers.size()];
+         trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[0][2]))-1))/networking;
 
-         for (int i = 0; i < 10; i++)
-         {
-             trueMid[i] = -(Math.log((100 / Double.parseDouble(myRegionArray[0][2])) - 1)) / networking;
-         }
-
-
-
-         Toast.makeText(TimerTest.this, "" + trueMid[0] , Toast.LENGTH_SHORT).show();
+         Toast.makeText(TimerTest.this, "" + trueMid , Toast.LENGTH_SHORT).show();
 
  //End
 
@@ -181,8 +152,8 @@ import java.util.List;
                                      time.update('s', time.getSec() + (3600 * 12));
                                      time_view.setText(time.toString());
                                      equation_view.setText("Anti-Virus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getDay()) - shuffle));
-                                     logarithmic_view.setText("This is what the logartithimic will look like for Asia:\n" + (100 / (1 + Math.exp(networking * (time.getDay() - trueMid[0])))));
-                                     equationVal = 100 / (1 + Math.exp(networking * (time.getDay() - trueMid[0])));
+                                     logarithmic_view.setText("This is what the logartithimic will look like for Asia:\n" + (100 / (1 + Math.exp(networking * (time.getDay() - trueMid)))));
+                                     equationVal = 100 / (1 + Math.exp(networking * (time.getDay() - trueMid)));
 
 
                                      if (equationVal >= 50) {
@@ -267,13 +238,4 @@ import java.util.List;
          AppIndex.AppIndexApi.end(client, viewAction);
          client.disconnect();
      }
-
-
-
-
-//     @Override
-//     public void onDestroy() {
-//         this.mWakeLock.release();
-//         super.onDestroy();
-//     }
  }
