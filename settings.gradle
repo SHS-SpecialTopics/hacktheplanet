@@ -1,6 +1,3 @@
-<<<<<<< HEAD
+
 include ':app'
-||||||| merged common ancestors
-include ':app'
-=======
->>>>>>> master
+
