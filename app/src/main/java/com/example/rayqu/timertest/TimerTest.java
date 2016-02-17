@@ -1,5 +1,6 @@
  package com.example.rayqu.timertest;
 
+import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -11,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.WindowManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
@@ -34,7 +37,7 @@ import java.util.List;
      double panic = 1;
      int shuffle = 0;
 
-     double networking = -.05;
+     double networking = -.5;
      //double midpoint = 5;
      boolean suspended = false;
 
@@ -77,7 +80,7 @@ import java.util.List;
 
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_timer_test);
-
+         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
          mySound = MediaPlayer.create(this, R.raw.soundeffect);
 
@@ -113,7 +116,7 @@ import java.util.List;
          List<String> myNumbers = new ArrayList<String>();
 
          for (int i = 0; i < 10; i++){
-             myNumbers.add("" + myRegionArray[i][2]);
+             myNumbers.add("" + myRegionArray[i][0]);
 
          }
 
@@ -127,7 +130,27 @@ import java.util.List;
 
          lv.setAdapter(arrayAdapter);
 
-         trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[0][2]))-1))/networking;
+         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+             @Override
+             public void onItemClick(AdapterView<?> parent, View view, int position,
+                                     long id) {
+
+                 String pickedCountry = ((TextView) view).getText().toString();
+
+                 Toast.makeText(getBaseContext(), pickedCountry, Toast.LENGTH_LONG).show();
+
+             }
+         });
+
+
+
+
+
+
+
+
+
+         trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[8][2]))-1))/networking;
 
          Toast.makeText(TimerTest.this, "" + trueMid , Toast.LENGTH_SHORT).show();
 
