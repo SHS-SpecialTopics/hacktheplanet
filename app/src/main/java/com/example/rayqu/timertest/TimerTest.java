@@ -142,14 +142,6 @@ import java.util.List;
              }
          });
 
-
-
-
-
-
-
-
-
          trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[8][2]))-1))/networking;
 
          Toast.makeText(TimerTest.this, "" + trueMid , Toast.LENGTH_SHORT).show();
@@ -218,7 +210,10 @@ import java.util.List;
          if (id == R.id.action_settings) {
              return true;
          }
-
+         if (id == R.id.upgrades) {
+             startActivity(new Intent(this, Upgrades.class));
+             return true;
+         }
          return super.onOptionsItemSelected(item);
      }
 
