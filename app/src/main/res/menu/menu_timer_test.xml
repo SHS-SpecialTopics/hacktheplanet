@@ -10,4 +10,7 @@
     <item
         android:id="@+id/upgrades"
         android:title="Upgrade"/>
+    <item
+        android:id="@+id/databaseTester"
+        android:title="Database"/>
 </menu>
