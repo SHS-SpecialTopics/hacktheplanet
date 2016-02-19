@@ -214,6 +214,10 @@ import java.util.List;
              startActivity(new Intent(this, Upgrades.class));
              return true;
          }
+         if (id == R.id.databaseTester) {
+             startActivity(new Intent(this, myDatabase.class));
+             return true;
+         }
          return super.onOptionsItemSelected(item);
      }
 

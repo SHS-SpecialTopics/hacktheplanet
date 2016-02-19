@@ -1,4 +1,4 @@
-/*package com.example.rayqu.timertest;
+package com.example.rayqu.timertest;
 
 import android.content.Intent;
 import android.support.annotation.VisibleForTesting;
@@ -23,7 +23,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class VirusDetail extends AppCompatActivity implements android.view.View.OnClickListener{
+public class VirusDetail extends AppCompatActivity{ //implements android.view.View.OnClickListener{
 
     Button btnSave ,  btnDelete;
     Button btnClose;
@@ -35,12 +35,12 @@ public class VirusDetail extends AppCompatActivity implements android.view.View.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_virus_detail);
+        setContentView(R.layout.fake_map);
 
 
-        DataTest maker = new DataTest();
+        //DataTest maker = new DataTest();
 
-        btnSave = (Button) findViewById(R.id.btnSave);
+        /* btnSave = (Button) findViewById(R.id.btnSave);
         btnDelete = (Button) findViewById(R.id.btnDelete);
         btnClose = (Button) findViewById(R.id.btnClose);
 
@@ -52,6 +52,7 @@ public class VirusDetail extends AppCompatActivity implements android.view.View.
         btnDelete.setOnClickListener(this);
         btnClose.setOnClickListener(this);
 
+        */
 
         Intent intent = getIntent();
 
@@ -66,8 +67,7 @@ public class VirusDetail extends AppCompatActivity implements android.view.View.
         virusPrime = repo.getVirusById(_Virus_Id);
 
 
-        //Find out if i did this wrong*************
-
+        /*
         if (intent.getIntExtra("origin",0) != 101)
 
         {
@@ -84,9 +84,10 @@ public class VirusDetail extends AppCompatActivity implements android.view.View.
         }
 
     }
+        */
 
 
-    public void onClick(View view) {
+    /* public void onClick(View view) {
 
 
         if (view == findViewById(R.id.btnSave)){
@@ -131,9 +132,8 @@ public class VirusDetail extends AppCompatActivity implements android.view.View.
             finish();
         }
 
-
+ */
     }
 
 }
 
-*/

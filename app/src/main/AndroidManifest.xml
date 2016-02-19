@@ -26,13 +26,12 @@
 
         <activity android:name=".Upgrades"></activity>
 
+        <activity android:name=".myDatabase"></activity>
 
 
 
 
-
-
-    </application>
+</application>
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
