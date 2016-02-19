@@ -5,7 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.Toast;
 
 
 /**
@@ -13,6 +13,7 @@ import android.widget.Button;
  */
 public class Upgrades extends AppCompatActivity implements View.OnClickListener {
     Button[] buttons = new Button[5];
+    public static double networking =-.5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,19 +31,27 @@ public class Upgrades extends AppCompatActivity implements View.OnClickListener 
     }
     public void onClick(View v) {
         if (v == buttons[0]) {
-            buttons[0].setText("Hello");
+            networking=-.05;
+            buttons[0].setText("Upgrade Complete");
         }
         else if (v == buttons[1]) {
-            buttons[1].setText("Hello");
+            networking=-.1;
+            buttons[1].setText("Upgrade Complete");
         }
         else if (v == buttons[2]) {
-            buttons[2].setText("Hello");
+            networking=-.15;
+            buttons[2].setText("Upgrade Complete");
         }
         else if (v == buttons[3]) {
-            buttons[3].setText("Hello");
+            networking=-.2;
+            buttons[3].setText("Upgrade Complete");
         }
         else if (v == buttons[4]) {
-            buttons[4].setText("Hello");
+            networking=-.25;
+            buttons[4].setText("Upgrade Complete");
         }
+    }
+    public static double getNetworking(){
+        return networking;
     }
 }

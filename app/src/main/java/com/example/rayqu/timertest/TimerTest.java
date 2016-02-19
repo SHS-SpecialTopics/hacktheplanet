@@ -37,11 +37,11 @@ import java.util.List;
      double panic = 1;
      int shuffle = 0;
 
-     public double networking = -.5;
+     static double networking = -.5;
      //double midpoint = 5;
      boolean suspended = false;
 
-     double trueMid;
+    static double trueMid;
 
      //246.8403042
 
@@ -142,7 +142,7 @@ import java.util.List;
              }
          });
 
-         trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[8][2]))-1))/networking;
+         trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[8][2]))-1))/Upgrades.getNetworking();
 
          Toast.makeText(TimerTest.this, "" + trueMid , Toast.LENGTH_SHORT).show();
 
@@ -259,5 +259,16 @@ import java.util.List;
          );
          AppIndex.AppIndexApi.end(client, viewAction);
          client.disconnect();
+     }
+     @Override
+     public void onResume(){
+         super.onResume();
+         trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[8][2]))-1))/Upgrades.getNetworking();
+
+         Toast.makeText(TimerTest.this, "" + trueMid , Toast.LENGTH_SHORT).show();
+
+     }
+     public static double getTrueMid(){
+         return trueMid;
      }
  }
