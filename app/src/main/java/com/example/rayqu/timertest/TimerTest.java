@@ -37,7 +37,7 @@ import java.util.List;
      double panic = 1;
      int shuffle = 0;
 
-     double networking = -.5;
+     public double networking = -.5;
      //double midpoint = 5;
      boolean suspended = false;
 
