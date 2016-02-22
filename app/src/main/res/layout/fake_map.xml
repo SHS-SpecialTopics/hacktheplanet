@@ -8,8 +8,19 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fakeMapView"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:scaleType="fitXY"
-        android:src="@drawable/fakemap2" />
+        android:src="@drawable/fakemap2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitEnd" />
+
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:id="@+id/stuff_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="25dp"
+        />
+
 </RelativeLayout>

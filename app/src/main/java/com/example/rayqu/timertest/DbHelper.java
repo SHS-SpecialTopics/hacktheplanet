@@ -23,7 +23,7 @@ public class DbHelper extends SQLiteOpenHelper {
         String CREATE_TABLE_DATA= "CREATE TABLE " + DataOutline.TABLE  + "("
                 + DataOutline.KEY_ID  + " INTEGER PRIMARY KEY AUTOINCREMENT ,"
                 + DataOutline.KEY_name + " TEXT, "
-                + DataOutline.KEY_category + " INTEGER, "
+                + DataOutline.KEY_category + " DOUBLE, "
                 + DataOutline.KEY_value + " TEXT )";
 
         db.execSQL(CREATE_TABLE_DATA);
