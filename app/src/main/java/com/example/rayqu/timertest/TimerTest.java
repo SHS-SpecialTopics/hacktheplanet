@@ -215,7 +215,10 @@ import java.util.List;
              return true;
          }
          if (id == R.id.databaseTester) {
-             startActivity(new Intent(this, myDatabase.class));
+
+             Intent intentData = new Intent(this, myDatabase.class);
+             intentData.putExtra("virus_Id", 0);
+             startActivity(intentData);
              return true;
          }
          if (id == R.id.hexagonShit){

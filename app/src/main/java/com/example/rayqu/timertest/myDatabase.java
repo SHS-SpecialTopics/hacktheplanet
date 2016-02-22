@@ -3,6 +3,7 @@ package com.example.rayqu.timertest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -27,17 +28,19 @@ public class myDatabase extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fake_map);
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        Intent intent = getIntent();
 
-        _Virus_Id = intent.getIntExtra("virus_Id", 0);
+        Intent intentData = getIntent();
+
+        _Virus_Id = intentData.getIntExtra("virus_Id", 0);
 
 
         DbActions repo = new DbActions(this);
 
-        DataOutline virusPrime = new DataOutline();
+        //DataOutline virusPrime = new DataOutline();
 
-        virusPrime = repo.getVirusById(_Virus_Id);
+        //virusPrime = repo.getVirusById(_Virus_Id);
 
 
         //This is where I will get the numbers from the Upgrades screem
@@ -49,14 +52,19 @@ public class myDatabase extends AppCompatActivity {
         DataOutline virus = new DataOutline();
 
 
+
+
         virus.value = value;
         virus.category = category;
         virus.name = name;
         virus.virus_ID = _Virus_Id;
 
 
-        if (_Virus_Id == 0){
-            _Virus_Id = repo.insert(virus);
+
+        //Make this work
+
+        if (repo.getVirusById(virus.virus_ID - 1).virus_ID + 1 != virus.virus_ID + 1){
+            repo.insert(virus);
 
             Toast.makeText(this,"New Virus Insert",Toast.LENGTH_SHORT).show();
             //finish();
@@ -66,7 +74,6 @@ public class myDatabase extends AppCompatActivity {
             Toast.makeText(this,"Virus Updated",Toast.LENGTH_SHORT).show();
             //finish();
         }
-
 
         lv = (ListView) findViewById(R.id.stuff_view);
 
