@@ -10,6 +10,6 @@
         android:id="@+id/fakeMapView"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:scaleType="fitXY"
+        android:scaleType="centerCrop"
         android:src="@drawable/fakemap" />
 </RelativeLayout>
