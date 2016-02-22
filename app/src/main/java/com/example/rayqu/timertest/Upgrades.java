@@ -1,5 +1,10 @@
 package com.example.rayqu.timertest;
 
+import android.graphics.Paint;
+import android.graphics.Path;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.PathShape;
+import android.graphics.drawable.shapes.Shape;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +19,7 @@ import android.widget.Toast;
 public class Upgrades extends AppCompatActivity implements View.OnClickListener {
     Button[] buttons = new Button[5];
     public static double networking =-.5;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
