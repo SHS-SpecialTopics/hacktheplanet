@@ -8,8 +8,14 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/fakeMapView"
-        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/fakemap" />
+        android:src="@drawable/fakemap2"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true" />
+
+    =======
+        android:scaleType="fitXY"
+        android:src="@drawable/fakemap2" />
+>>>>>>> 3102ab66a9a0c9fde6e26a249bafd105412f763d
 </RelativeLayout>
