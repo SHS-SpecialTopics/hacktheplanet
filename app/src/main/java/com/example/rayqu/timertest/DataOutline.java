@@ -18,6 +18,6 @@ public class DataOutline {
         public int virus_ID;
         public String name;
         public String category;
-        public int value;
+        public double value;
 
 }

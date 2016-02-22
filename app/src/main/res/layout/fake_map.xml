@@ -10,12 +10,17 @@
         android:id="@+id/fakeMapView"
         android:layout_centerHorizontal="true"
         android:src="@drawable/fakemap2"
-        android:scaleType="fitXY"
         android:layout_alignParentTop="true"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitEnd" />
 
-    =======
-        android:scaleType="fitXY"
-        android:src="@drawable/fakemap2" />
->>>>>>> 3102ab66a9a0c9fde6e26a249bafd105412f763d
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:id="@+id/stuff_view"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:paddingTop="25dp"
+        />
+
 </RelativeLayout>
