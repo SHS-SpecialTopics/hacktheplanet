@@ -11,7 +11,8 @@
         <activity
             android:name=".TimerTest"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,7 +27,8 @@
 
         <activity android:name=".Upgrades"></activity>
 
-        <activity android:name=".myDatabase"></activity>
+        <activity android:name=".myDatabase"
+            android:screenOrientation="landscape"></activity>
 
 
 

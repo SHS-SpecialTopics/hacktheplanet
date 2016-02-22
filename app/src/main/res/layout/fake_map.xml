@@ -11,5 +11,5 @@
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:scaleType="fitXY"
-        android:src="@drawable/fakemap" />
+        android:src="@drawable/fakemap2" />
 </RelativeLayout>
