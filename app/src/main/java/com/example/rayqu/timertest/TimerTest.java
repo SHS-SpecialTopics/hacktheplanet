@@ -268,7 +268,5 @@ import java.util.List;
          Toast.makeText(TimerTest.this, "" + trueMid , Toast.LENGTH_SHORT).show();
 
      }
-     public static double getTrueMid(){
-         return trueMid;
-     }
+
  }
