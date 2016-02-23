@@ -29,9 +29,6 @@
 
         <activity android:name=".myDatabase"/>
 
-        <activity android:name=".MainActivity"/>
-
-
     </application>
 
 

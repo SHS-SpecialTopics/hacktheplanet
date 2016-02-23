@@ -221,10 +221,7 @@ import java.util.List;
              startActivity(intentData);
              return true;
          }
-         if (id == R.id.hexagonShit){
-             startActivity(new Intent(this, myDatabase.class));
-         return true;
-            }
+
          return super.onOptionsItemSelected(item);
      }
 
