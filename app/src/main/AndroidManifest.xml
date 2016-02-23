@@ -30,9 +30,7 @@
         <activity android:name=".myDatabase"
             android:screenOrientation="landscape"></activity>
 
-        <activity android:name=".MainActivity"></activity>
-
-</application>
+    </application>
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
