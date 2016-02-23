@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
  public class TimerTest extends AppCompatActivity {
-
+     boolean openedYet = false;
 
      myDate time = new myDate(0);
 
@@ -215,7 +215,10 @@ import java.util.List;
              return true;
          }
          if (id == R.id.databaseTester) {
-             startActivity(new Intent(this, myDatabase.class));
+
+             Intent intentData = new Intent(this, myDatabase.class);
+             intentData.putExtra("virus_Id", 0);
+             startActivity(intentData);
              return true;
          }
 

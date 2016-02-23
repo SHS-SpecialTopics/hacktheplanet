@@ -15,5 +15,5 @@
         android:title="Database"/>
     <item
         android:id="@+id/hexagonShit"
-        android:title="hexagon"/>
+        android:title="Hexagon"/>
 </menu>
