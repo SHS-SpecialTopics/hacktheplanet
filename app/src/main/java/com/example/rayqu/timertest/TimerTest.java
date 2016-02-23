@@ -29,7 +29,7 @@ import java.util.ArrayList;
 import java.util.List;
 
  public class TimerTest extends AppCompatActivity {
-
+     boolean openedYet = false;
 
      myDate time = new myDate(0);
 
