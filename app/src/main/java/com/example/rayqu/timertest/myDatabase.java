@@ -1,5 +1,6 @@
 package com.example.rayqu.timertest;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,7 +27,6 @@ public class myDatabase extends AppCompatActivity {
     String category;
     String name;
     boolean matching = false;
-    Global global;
 
     int[] testerRay = {1,2,3,4,5,6};
 
@@ -59,28 +59,28 @@ public class myDatabase extends AppCompatActivity {
 
         //TimerTest bob = new TimerTest();
 
-        //Boolean openedYet = ((Global)this.getApplication()).get_Opened();
+        Global global = (Global) getApplication();
+
+        Boolean openedYet = global.get_Opened();
 
 
-        //if(!openedYet) {
-            for (int k = 0; k <= 10; k++) {
+        if(!openedYet) {
+            for (int k = 0; k < 10; k++) {
                 virus.value = value + k;
                 virus.category = category;
                 virus.name = name;
                 virus.virus_ID = k;
                 repo.insert(virus);
             }
-        //}
+        }
 
-        //openedYet = true;
+        ((Global) this.getApplicationContext()).set_Opened(true);
 
         //This is my viruses virus ID
 
         int userInputedNum = 5;
 
         //If the virus.virus_Id is equal to the number that the user want to change then update it
-
-
         //Make this work
 
         while(!matching){
