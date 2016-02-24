@@ -16,6 +16,7 @@ import java.util.HashMap;
 /**
  * Created by rayqu on 2/19/2016.
  */
+
 public class myDatabase extends AppCompatActivity {
 
 
@@ -79,14 +80,15 @@ public class myDatabase extends AppCompatActivity {
         //This is my viruses virus ID
 
         int userInputedNum = 5;
+        int userChangeNum = 10;
 
-        //If the virus.virus_Id is equal to the number that the user want to change then update it
-        //Make this work
+        //Save Global Variable in Database
 
         while(!matching){
             for(int i = 0; i < testerRay.length ; i ++){
                 if(i == userInputedNum) {
                     DataOutline virusChange = repo.getVirusById(userInputedNum);
+                    virusChange.value += userChangeNum;
                     repo.update(virusChange);
                     Toast.makeText(this, "Virus Number " + virusChange.virus_ID + "Updated", Toast.LENGTH_SHORT).show();
                     matching = true;
