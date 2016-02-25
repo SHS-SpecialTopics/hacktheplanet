@@ -1,55 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/RelativeLayout">
+    android:layout_height="fill_parent"
+    android:id="@+id/WholeScreenLinearLayout" android:weightSum="6">
 
     <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:weightSum="3"
         android:orientation="horizontal"
-        android:id="@+id/linearLayout">
+        android:id="@+id/tabsLinearLayout">
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:text="Networking"
-            android:id="@+id/button1" />
+            android:id="@+id/networkingButton" />
 
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:text="Lethatlity"
-            android:id="@+id/button2" />
+            android:id="@+id/lethalityButton" />
 
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
+            android:layout_height="fill_parent"
             android:text="Security"
-            android:id="@+id/button3" />
+            android:id="@+id/securityButton" />
     </LinearLayout>
 
     <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linearLayout"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/tabsLinearLayout"
         android:weightSum="6"
         android:orientation="horizontal"
-        android:id="@+id/linearLayout2">
-
+        android:id="@+id/firstRowLinearLayout">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content" />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Pop_Ups"
-            android:id="@+id/button4" />
+            android:layout_height="fill_parent"
+            android:text="Pop_Up Apps"
+            android:textSize="12sp"
+            android:id="@+id/popUpButton" />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Program"
-            android:id="@+id/button5" />
+            android:layout_height="fill_parent"
+            android:text="Infected Programs"
+            android:textSize="12sp"
+            android:id="@+id/programsButton" />
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -57,27 +64,30 @@
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="LAN"
-            android:id="@+id/button6" />
+            android:layout_height="fill_parent"
+            android:text="LAN Connections"
+            android:textSize="11sp"
+            android:id="@+id/lanButton" />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="USB"
-            android:id="@+id/button7" />
+            android:layout_height="fill_parent"
+            android:text="USB Connections"
+            android:textSize="11sp"
+            android:id="@+id/usbButton" />
         <TextView
             android:layout_width="0dp"
-            android:layout_weight="1"
+            android:layout_weight=".5"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
     <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linearLayout2"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/firstRowLinearLayout"
         android:weightSum="5"
         android:orientation="horizontal"
-        android:id="@+id/linearLayout3">
+        android:id="@+id/secondRowlinearLayout">
 
         <TextView
             android:layout_width="0dp"
@@ -90,9 +100,9 @@
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="LAN"
-            android:id="@+id/button8" />
+            android:layout_height="fill_parent"
+            android:text="MAN"
+            android:id="@+id/manButton" />
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -105,11 +115,12 @@
     </LinearLayout>
 
     <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/linearLayout3"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/secondRowlinearLayout"
         android:weightSum="6"
         android:orientation="horizontal"
-        android:id="@+id/linearLayout4">
+        android:id="@+id/thirdRowlinearLayout">
         <TextView
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -117,36 +128,118 @@
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Pop_Ups"
-            android:id="@+id/button9" />
+            android:layout_height="fill_parent"
+            android:text="Servers (TC)"
+            android:id="@+id/serversTCButton" />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="Program"
-            android:id="@+id/button10" />
+            android:layout_height="fill_parent"
+            android:text="Satellite"
+            android:id="@+id/satelliteButton" />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="LAN"
-            android:id="@+id/button11" />
+            android:layout_height="fill_parent"
+            android:text="Cloud"
+            android:id="@+id/cloudButton" />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="USB"
-            android:id="@+id/button12" />
+            android:layout_height="fill_parent"
+            android:text="Mainframe"
+            android:textSize="12sp"
+            android:id="@+id/mainframeButton" />
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:text="USB"
-            android:id="@+id/button13" />
+            android:layout_height="fill_parent"
+            android:text="Servers (Buisness)"
+            android:id="@+id/serversBuisnessButton" />
 
     </LinearLayout>
 
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/thirdRowlinearLayout"
+        android:weightSum="5"
+        android:orientation="horizontal"
+        android:id="@+id/fourthRowLinearLayout">
 
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:text="Trans-Atlantic Cables"
+            android:textSize="11sp"
+            android:id="@+id/atlanticCablesButton" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
 
-</RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_below="@id/fourthRowLinearLayout"
+        android:weightSum="6"
+        android:orientation="horizontal"
+        android:id="@+id/fifthRowLinearLayout">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:text="Home Routers"
+            android:textSize="12sp"
+            android:id="@+id/homeRoutersButton" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:text="Buisness Routers"
+            android:textSize="12sp"
+            android:id="@+id/buisnessRoutersButton" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:text="Cell Towers"
+            android:textSize="12sp"
+            android:id="@+id/cellTowersButton" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:text="Internet Providers"
+            android:textSize="12sp"
+            android:id="@+id/internetProvidersButton" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</LinearLayout>
