@@ -3,6 +3,7 @@
     package="com.example.rayqu.timertest">
 
     <application
+        android:name=".Global"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -28,11 +29,6 @@
             android:screenOrientation="landscape"/>
 
         <activity android:name=".myDatabase"/>
-
-        <application android:name=".Global"
-            android:icon="@drawable/fakemap"
-            android:label="@string/app_name"/>
-
 
     </application>
 

@@ -4,7 +4,7 @@ import android.app.Application;
 
 public  class  Global extends Application {
 
-    private Boolean openedYet =false;
+    private Boolean openedYet = false;
 
     public Boolean get_Opened() {
         return openedYet;
