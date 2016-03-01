@@ -27,7 +27,7 @@ public class Upgrades extends AppCompatActivity implements View.OnClickListener 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.upgrades);
+        setContentView(R.layout.networking_upgrades);
         networkButtons[0] = (Button) findViewById(R.id.popUpButton) ;
         networkButtons[0].setOnClickListener(this);
         networkButtons[1] = (Button) findViewById(R.id.programsButton) ;
@@ -140,6 +140,7 @@ public class Upgrades extends AppCompatActivity implements View.OnClickListener 
             if(cellTowers)
                 networkButtons[10].setVisibility(View.VISIBLE);
         }
+
         if(v==networkButtons[13]) {
             cellTowers=true;
             if(businessRouters)
