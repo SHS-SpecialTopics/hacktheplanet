@@ -24,7 +24,7 @@ public class BooleanHelper extends SQLiteOpenHelper {
 
         String CREATE_TABLE_DATA= "CREATE TABLE " + BooleanOutline.TABLE  + "("
                 + BooleanOutline.KEY_ID  + " INTEGER PRIMARY KEY AUTOINCREMENT ,"
-                + DataOutline.KEY_value + " BOOLEAN )";
+                + DataOutline.KEY_value + " INTEGER )";
 
         db.execSQL(CREATE_TABLE_DATA);
 
