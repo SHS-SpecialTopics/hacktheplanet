@@ -253,7 +253,9 @@
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:layout_weight="2.5">
+            android:layout_weight="2.5"
+            android:background="#FF0000"
+            android:id="@+id/CircularLinearLayout">
 
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -266,7 +268,9 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="fill_parent" />
+                    android:layout_height="fill_parent"
+                    android:text="Laptop"
+                    android:id="@+id/LaptopButton"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -279,7 +283,10 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="fill_parent" />
+                    android:layout_height="fill_parent"
+                    android:visibility="invisible"
+                    android:text="Desktop"
+                    android:id="@+id/DesktopButton"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -287,7 +294,10 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="fill_parent" />
+                    android:layout_height="fill_parent"
+                    android:text="Tablets"
+                    android:visibility="invisible"
+                    android:id="@+id/TablesButton"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -300,7 +310,10 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="fill_parent" />
+                    android:layout_height="fill_parent"
+                    android:text="Ultimate Civilian Controller"
+                    android:id="@+id/UCCButton"
+                    android:visibility="invisible"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -313,7 +326,10 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="fill_parent" />
+                    android:layout_height="fill_parent"
+                    android:text="Work Stations"
+                    android:id="@+id/StationsButton"
+                    android:visibility="invisible"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -321,7 +337,10 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="fill_parent" />
+                    android:layout_height="fill_parent"
+                    android:text="Smart Phones"
+                    android:id="@+id/SmartPhonesButton"
+                    android:visibility="invisible"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="fill_parent"
@@ -334,7 +353,10 @@
                 <Button
                     android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:layout_height="fill_parent" />
+                    android:layout_height="fill_parent"
+                    android:text="Mobile Phones"
+                    android:id="@+id/MobilePhonesButton"
+                    android:visibility="invisible"/>
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -345,9 +367,111 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="fill_parent"
-            android:layout_weight="2.5">
+            android:layout_weight="2.5"
+            android:orientation="vertical"
+            android:background="#0000FF">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5">
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent" />
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="3"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".5">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"/>
+            </LinearLayout>
         </LinearLayout>
-
 
     </LinearLayout>
 

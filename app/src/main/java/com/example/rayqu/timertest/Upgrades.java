@@ -14,6 +14,7 @@ public class Upgrades extends AppCompatActivity implements View.OnClickListener 
     Button[] networkButtons = new Button[15];
     Button[] tabButtons = new Button[3];
     LinearLayout[] networkingLayouts = new LinearLayout[5];
+    Button[] circularLethalityButtons = new Button[7];
     boolean infectedPrograms=false;
     boolean LAN =false;
     boolean businessRouters =false;
@@ -81,6 +82,22 @@ public class Upgrades extends AppCompatActivity implements View.OnClickListener 
         networkButtons[10].setVisibility(View.INVISIBLE);
         networkButtons[12].setVisibility(View.INVISIBLE);
         networkButtons[13].setVisibility(View.INVISIBLE);
+
+        circularLethalityButtons[0] = (Button) findViewById(R.id.LaptopButton) ;
+        circularLethalityButtons[0].setOnClickListener(this);
+        circularLethalityButtons[1] = (Button) findViewById(R.id.DesktopButton) ;
+        circularLethalityButtons[1].setOnClickListener(this);
+        circularLethalityButtons[2] = (Button) findViewById(R.id.StationsButton) ;
+        circularLethalityButtons[2].setOnClickListener(this);
+        circularLethalityButtons[3] = (Button) findViewById(R.id.MobilePhonesButton) ;
+        circularLethalityButtons[3].setOnClickListener(this);
+        circularLethalityButtons[4] = (Button) findViewById(R.id.SmartPhonesButton) ;
+        circularLethalityButtons[4].setOnClickListener(this);
+        circularLethalityButtons[5] = (Button) findViewById(R.id.TablesButton) ;
+        circularLethalityButtons[5].setOnClickListener(this);
+        circularLethalityButtons[6] = (Button) findViewById(R.id.UCCButton) ;
+        circularLethalityButtons[6].setOnClickListener(this);
+
     }
     public void onClick(View v) {
         if(v==networkButtons[0]){
@@ -156,6 +173,7 @@ public class Upgrades extends AppCompatActivity implements View.OnClickListener 
                 l.setVisibility(View.VISIBLE);
             }
         }
+
     }
     public static double getNetworking(){
         return networking;
