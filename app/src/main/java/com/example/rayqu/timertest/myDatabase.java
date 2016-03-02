@@ -41,13 +41,13 @@ public class myDatabase extends AppCompatActivity {
 
         //Make a boolean to see if screen has loaded once and if it is the first time loading it add a blank virus to the repo database
 
-
         Intent intentData = getIntent();
 
         _Virus_Id = intentData.getIntExtra("virus_Id", 0);
 
-
         DbActions repo = new DbActions(this);
+
+        DataOutline virus = new DataOutline();
 
         //This is where I will get the numbers from the Upgrades Screen
 
@@ -56,14 +56,17 @@ public class myDatabase extends AppCompatActivity {
         name = "CellTowers";
         id = 0;
 
-        DataOutline virus = new DataOutline();
+        // Make and Get Boolean from Table
 
-        //TimerTest bob = new TimerTest();
+        BooleanActions placer = new BooleanActions(this);
+
+        BooleanOutline boo = new BooleanOutline();
+
+        // Make and get Global Value
 
         Global global = (Global) getApplication();
 
         Boolean openedYet = global.get_Opened();
-
 
         if(!openedYet) {
             for (int k = 0; k < 10; k++) {
@@ -72,10 +75,14 @@ public class myDatabase extends AppCompatActivity {
                 virus.name = name;
                 virus.virus_ID = k;
                 repo.insert(virus);
+                ((Global) this.getApplicationContext()).set_Opened(true);
+
             }
         }
 
-        ((Global) this.getApplicationContext()).set_Opened(true);
+
+        int myBooInt = (global.get_Opened()) ? 1 : 0;
+
 
         //This is my viruses virus ID
 
