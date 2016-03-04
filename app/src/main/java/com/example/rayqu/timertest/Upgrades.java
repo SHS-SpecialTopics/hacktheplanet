@@ -7,9 +7,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 
 
-/**
- * Created by Owner on 2/17/2016.
- */
 public class Upgrades extends AppCompatActivity implements View.OnClickListener {
     Button[] networkButtons = new Button[15];
     Button[] tabButtons = new Button[3];

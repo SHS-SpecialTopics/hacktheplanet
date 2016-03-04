@@ -24,7 +24,7 @@ public class myDatabase extends AppCompatActivity {
     private ListView lv;
     double value;
     int id;
-    int count;
+    int count = 0;
     String category;
     String name;
     boolean matching = false;
@@ -33,8 +33,12 @@ public class myDatabase extends AppCompatActivity {
 
 
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fake_map);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
@@ -45,9 +49,19 @@ public class myDatabase extends AppCompatActivity {
 
         _Virus_Id = intentData.getIntExtra("virus_Id", 0);
 
+        //int count = intentData.getIntExtra("count", 0);
+
+
         DbActions repo = new DbActions(this);
 
         DataOutline virus = new DataOutline();
+
+
+        Global global = (Global) getApplication();
+
+
+        count = global.counter;
+
 
         //This is where I will get the numbers from the Upgrades Screen
 
@@ -58,13 +72,46 @@ public class myDatabase extends AppCompatActivity {
 
         // Make and Get Boolean from Table
 
-        BooleanActions placer = new BooleanActions(this);
 
-        BooleanOutline boo = new BooleanOutline();
+        BooleanActions placer;
+        BooleanOutline boo;
+
+        if(count == 0)
+        {
+            placer = new BooleanActions(this);
+            boo = new BooleanOutline();
+            global.setYanksOut(placer);
+            global.setYanksIn(boo);
+            count++;
+        }
+        else
+        {
+            //Count has to be passed into this activity in the intent and have to figure out a way for the placer to always have a value
+            placer = global.getYanksOut();
+            boo = global.getYanksIn();
+        }
+
+
+        Boolean tester;
+
+        if (boo.value == 0)
+        {
+            tester = false;
+        }
+        else
+        {
+            tester = true;
+        }
+
+        global.set_Opened(tester);
 
         // Make and get Global Value
 
-        Global global = (Global) getApplication();
+        //boo.value = 0;
+
+        //placer.insert(boo);
+
+        //Global global = (Global) getApplication();
 
         Boolean openedYet = global.get_Opened();
 
@@ -75,14 +122,25 @@ public class myDatabase extends AppCompatActivity {
                 virus.name = name;
                 virus.virus_ID = k;
                 repo.insert(virus);
-                ((Global) this.getApplicationContext()).set_Opened(true);
-
             }
+            ((Global) this.getApplicationContext()).set_Opened(true);
+            int myBooInt = (global.get_Opened()) ? 1 : 0;
+            boo.value = myBooInt;
+            global.setYanksOut(placer);
+            global.setYanksIn(boo);
+
+
         }
 
 
-        int myBooInt = (global.get_Opened()) ? 1 : 0;
 
+        //int myBooInt = (global.get_Opened()) ? 1 : 0;
+
+
+        //boo.value = myBooInt;
+
+        placer.update(boo);
+        global.setYanksOut(placer);
 
         //This is my viruses virus ID
 
@@ -118,6 +176,8 @@ public class myDatabase extends AppCompatActivity {
         lv.setAdapter(arrayAdapter);
 
 
+
+        global.counter = count;
 
     }
 
