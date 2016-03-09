@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class BooleanActions {
+
     private BooleanHelper bHelper;
 
     public BooleanActions(Context context) {
@@ -40,14 +41,14 @@ public class BooleanActions {
         values.put(BooleanOutline.KEY_value, boo.value);
 
         // It's a good practice to use parameter ?, instead of concatenate string
-        db.update(BooleanOutline.TABLE, values, BooleanOutline.KEY_ID + "= ?", new String[]{String.valueOf(boo.value)});
+        db.update(BooleanOutline.TABLE, values, BooleanOutline.KEY_ID + "= ? ", new String[]{String.valueOf(0)}); // was boo.value
         db.close(); // Closing database connection
-    }
+     }
 
 
 
 
-    public BooleanOutline getBooleann(int Id){
+    public BooleanOutline getBoolean(int Id){
         SQLiteDatabase db = bHelper.getReadableDatabase();
         String selectQuery =  "SELECT  " +
                 DataOutline.KEY_ID + "," +

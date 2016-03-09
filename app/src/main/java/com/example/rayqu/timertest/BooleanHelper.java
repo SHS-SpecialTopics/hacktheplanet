@@ -4,15 +4,13 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by rayqu on 2/25/2016.
- */
+
 public class BooleanHelper extends SQLiteOpenHelper {
 
 
     // If you change the database schema, you must increment the database version.
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "FeedReader.db";
+    public static final String DATABASE_NAME = "StupidOne.db";
 
     public BooleanHelper(Context context) {
 
@@ -27,7 +25,6 @@ public class BooleanHelper extends SQLiteOpenHelper {
                 + DataOutline.KEY_value + " INTEGER )";
 
         db.execSQL(CREATE_TABLE_DATA);
-
 
 
     }

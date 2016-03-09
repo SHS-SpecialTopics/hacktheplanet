@@ -3,19 +3,18 @@ package com.example.rayqu.timertest;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-/**
- * Created by rayqu on 2/19/2016.
- */
 
 public class myDatabase extends AppCompatActivity {
 
@@ -24,22 +23,31 @@ public class myDatabase extends AppCompatActivity {
     private ListView lv;
     double value;
     int id;
-    int count;
+    int count = 0;
     String category;
     String name;
     boolean matching = false;
 
     int[] testerRay = {1,2,3,4,5,6};
 
+    int counter = 0;
+
+    final String PREFS_NAME = "MyPresFile";
+    final int FOOBAR = 0;
+    final String GETIT = "yolo";
+
+    BooleanActions placer;
+    BooleanOutline boo;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.fake_map);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
 
-        //Make a boolean to see if screen has loaded once and if it is the first time loading it add a blank virus to the repo database
+        // Virus Database Stuff
 
         Intent intentData = getIntent();
 
@@ -48,6 +56,19 @@ public class myDatabase extends AppCompatActivity {
         DbActions repo = new DbActions(this);
 
         DataOutline virus = new DataOutline();
+
+        // End of Virus Database Stuff
+
+
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        int countForMe = prefs.getInt(GETIT,FOOBAR);
+
+        Toast.makeText(myDatabase.this, "" + countForMe, Toast.LENGTH_SHORT).show();
+
+
+        Global global = (Global) getApplication();
+
+        count = global.counter;
 
         //This is where I will get the numbers from the Upgrades Screen
 
@@ -58,31 +79,50 @@ public class myDatabase extends AppCompatActivity {
 
         // Make and Get Boolean from Table
 
-        BooleanActions placer = new BooleanActions(this);
+        Boolean tester;
 
-        BooleanOutline boo = new BooleanOutline();
+        if(countForMe == 0)
+        {
+            placer = new BooleanActions(this);
+            boo = new BooleanOutline();
+            global.setYanksOut(placer);
+            global.setYanksIn(boo);
+            count++;
+            global.counter = count;
+            tester = false;
+        }
+        else
+        {
+            placer = global.getYanksOut();
+            boo = global.getYanksIn();
+            tester = true;
+        }
 
-        // Make and get Global Value
 
-        Global global = (Global) getApplication();
+        global.set_Opened(tester);
 
         Boolean openedYet = global.get_Opened();
 
         if(!openedYet) {
+
             for (int k = 0; k < 10; k++) {
                 virus.value = value + k;
                 virus.category = category;
                 virus.name = name;
                 virus.virus_ID = k;
                 repo.insert(virus);
-                ((Global) this.getApplicationContext()).set_Opened(true);
-
             }
+            ((Global) this.getApplicationContext()).set_Opened(true);
+            int myBooInt = (global.get_Opened()) ? 1 : 0;
+            boo.value = myBooInt;
+            global.setYanksOut(placer);
+            global.setYanksIn(boo);
+
         }
 
 
-        int myBooInt = (global.get_Opened()) ? 1 : 0;
-
+        placer.update(boo);
+        global.setYanksOut(placer);
 
         //This is my viruses virus ID
 
@@ -118,10 +158,21 @@ public class myDatabase extends AppCompatActivity {
         lv.setAdapter(arrayAdapter);
 
 
+        global.counter++;
+
+
+        counter++;
+
+
+        prefs.edit().putInt(GETIT, counter).commit();
 
     }
 
-    
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+    }
 
 
 }

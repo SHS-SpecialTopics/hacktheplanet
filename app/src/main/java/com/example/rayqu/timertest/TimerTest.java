@@ -43,6 +43,8 @@ import java.util.List;
 
     static double trueMid;
 
+     int count = 0;
+
      //246.8403042
 
      private ListView lv;
@@ -173,7 +175,7 @@ import java.util.List;
 
                                      if (equationVal >= 50) {
                                          suspended = true;
-                                         mySound.start();
+                                         //mySound.start();
                                      }
 
                                  }
@@ -218,6 +220,7 @@ import java.util.List;
 
              Intent intentData = new Intent(this, myDatabase.class);
              intentData.putExtra("virus_Id", 0);
+             intentData.putExtra("count", 0);
              startActivity(intentData);
              return true;
          }
