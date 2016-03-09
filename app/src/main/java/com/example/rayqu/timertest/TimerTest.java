@@ -142,7 +142,7 @@ import java.util.List;
              }
          });
 
-         trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[8][2]))-1))/Upgrades.getNetworking();
+         trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[8][2]))-1))/networking;
 
          Toast.makeText(TimerTest.this, "" + trueMid , Toast.LENGTH_SHORT).show();
 
@@ -267,7 +267,7 @@ import java.util.List;
      @Override
      public void onResume(){
          super.onResume();
-         trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[8][2]))-1))/Upgrades.getNetworking();
+         trueMid = -(Math.log((100/Double.parseDouble(myRegionArray[8][2]))-1))/networking;
 
          Toast.makeText(TimerTest.this, "" + trueMid , Toast.LENGTH_SHORT).show();
 

@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="fill_parent"
-    android:id="@+id/WholeScreenLinearLayout" android:weightSum="6">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
 
-    <LinearLayout android:layout_width="fill_parent"
+    <android.support.design.widget.TabLayout
+        android:background="@color/colorPrimary"
+        android:layout_alignParentTop="true"
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        app:tabSelectedTextColor="#ffffff"
+        />
+    <android.support.v4.view.ViewPager
+        android:layout_below="@id/tab_layout"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+</RelativeLayout>
+
+
+
+    <!--
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/WholeScreenLinearLayout" android:weightSum="6">
+    -->
+
+
+    <!--<LinearLayout android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:weightSum="3"
@@ -32,7 +60,7 @@
             android:id="@+id/securityButton" />
     </LinearLayout>
 
-    <!--<LinearLayout android:layout_width="fill_parent"
+    <LinearLayout android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:layout_below="@id/tabsLinearLayout"
@@ -57,7 +85,7 @@
             android:text="Infected Programs"
             android:textSize="12sp"
             android:id="@+id/programsButton" />
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
@@ -75,7 +103,7 @@
             android:text="USB Connections"
             android:textSize="11sp"
             android:id="@+id/usbButton" />
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight=".5"
             android:layout_height="wrap_content" />
@@ -89,25 +117,26 @@
         android:orientation="horizontal"
         android:id="@+id/secondRowlinearLayout">
 
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="invisible"/>
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="fill_parent"
             android:text="MAN"
             android:id="@+id/manButton" />
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
@@ -121,7 +150,7 @@
         android:weightSum="6"
         android:orientation="horizontal"
         android:id="@+id/thirdRowlinearLayout">
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
@@ -167,11 +196,11 @@
         android:orientation="horizontal"
         android:id="@+id/fourthRowLinearLayout">
 
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
@@ -182,11 +211,11 @@
             android:text="Trans-Atlantic Cables"
             android:textSize="11sp"
             android:id="@+id/atlanticCablesButton" />
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
@@ -200,7 +229,7 @@
         android:weightSum="6"
         android:orientation="horizontal"
         android:id="@+id/fifthRowLinearLayout">
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight=".5"
             android:layout_height="wrap_content" />
@@ -218,7 +247,7 @@
             android:text="Buisness Routers"
             android:textSize="12sp"
             android:id="@+id/buisnessRoutersButton" />
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
@@ -236,32 +265,33 @@
             android:text="Internet Providers"
             android:textSize="12sp"
             android:id="@+id/internetProvidersButton" />
-        <TextView
+        <View
             android:layout_width="0dp"
             android:layout_weight=".5"
             android:layout_height="wrap_content" />
-    </LinearLayout>-->
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="5"
         android:orientation="horizontal"
-        android:id="@+id/LethalityLinearLayout">
+        android:id="@+id/LethalityLinearLayout"
+        android:visibility="gone">
 
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:layout_weight="2.5"
-            android:background="#FF0000"
+            android:background="@drawable/border"
             android:id="@+id/CircularLinearLayout">
 
             <LinearLayout
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".5">
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -270,8 +300,10 @@
                     android:layout_weight="1"
                     android:layout_height="fill_parent"
                     android:text="Laptop"
-                    android:id="@+id/LaptopButton"/>
-                <TextView
+                    android:textSize="10sp"
+                    android:id="@+id/LaptopButton"
+                    android:background="@drawable/vectordrawable"/>
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -287,7 +319,7 @@
                     android:visibility="invisible"
                     android:text="Desktop"
                     android:id="@+id/DesktopButton"/>
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -303,7 +335,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".5">
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -314,7 +346,7 @@
                     android:text="Ultimate Civilian Controller"
                     android:id="@+id/UCCButton"
                     android:visibility="invisible"/>
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -330,7 +362,7 @@
                     android:text="Work Stations"
                     android:id="@+id/StationsButton"
                     android:visibility="invisible"/>
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -346,7 +378,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".5">
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -357,7 +389,7 @@
                     android:text="Mobile Phones"
                     android:id="@+id/MobilePhonesButton"
                     android:visibility="invisible"/>
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -374,7 +406,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".5">
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="2"/>
@@ -382,7 +414,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent" />
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="2"/>
@@ -391,7 +423,16 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".5">
-                <TextView
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    />
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -399,15 +440,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent" />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
-                <Button
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="fill_parent" />
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -433,7 +466,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".5">
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -441,7 +474,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent" />
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -449,7 +482,7 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent" />
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="1"/>
@@ -458,7 +491,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:layout_weight=".5">
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:layout_weight="2"/>
@@ -466,13 +499,15 @@
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="fill_parent" />
-                <TextView
+                <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    android:layout_weight="2"/>
+                    android:layout_weight="2"
+                    android:visibility="invisible"/>
             </LinearLayout>
         </LinearLayout>
 
     </LinearLayout>
-
-</LinearLayout>
+-->
+<!--
+</LinearLayout>-->

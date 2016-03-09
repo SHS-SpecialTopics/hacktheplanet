@@ -1,6 +1,9 @@
 package com.example.rayqu.timertest;
 
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +13,38 @@ import android.widget.LinearLayout;
 /**
  * Created by Owner on 2/17/2016.
  */
-public class Upgrades extends AppCompatActivity implements View.OnClickListener {
-    Button[] networkButtons = new Button[15];
+public class Upgrades extends AppCompatActivity /*implements View.OnClickListener*/ {
+    ViewPager pager;
+    TabLayout tabLayout;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.networking_upgrades);
+
+        pager= (ViewPager) findViewById(R.id.view_pager);
+        tabLayout= (TabLayout) findViewById(R.id.tab_layout);
+        // Fragment manager to add fragment in viewpager we will pass object of Fragment manager to adpater class.
+        FragmentManager manager=getSupportFragmentManager();
+
+        //object of PagerAdapter passing fragment manager object as a parameter of constructor of PagerAdapter class.
+        PagerAdapter adapter=new PagerAdapter(manager);
+
+        //set Adapter to view pager
+        pager.setAdapter(adapter);
+
+        //set tablayout with viewpager
+        tabLayout.setupWithViewPager(pager);
+
+        // adding functionality to tab and viewpager to manage each other when a page is changed or when a tab is selected
+        pager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        //Setting tabs from adpater
+        tabLayout.setTabsFromPagerAdapter(adapter);
+
+    }
+}
+
+   /* Button[] networkButtons = new Button[15];
     Button[] tabButtons = new Button[3];
     LinearLayout[] networkingLayouts = new LinearLayout[5];
     Button[] circularLethalityButtons = new Button[7];
@@ -29,36 +62,115 @@ public class Upgrades extends AppCompatActivity implements View.OnClickListener 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.networking_upgrades);
-        networkButtons[0] = (Button) findViewById(R.id.popUpButton) ;
-        networkButtons[0].setOnClickListener(this);
-        networkButtons[1] = (Button) findViewById(R.id.programsButton) ;
-        networkButtons[1].setOnClickListener(this);
-        networkButtons[2] = (Button) findViewById(R.id.lanButton) ;
-        networkButtons[2].setOnClickListener(this);
-        networkButtons[3] = (Button) findViewById(R.id.usbButton) ;
-        networkButtons[3].setOnClickListener(this);
-        networkButtons[4] = (Button) findViewById(R.id.manButton) ;
-        networkButtons[4].setOnClickListener(this);
-        networkButtons[5] = (Button) findViewById(R.id.serversTCButton) ;
-        networkButtons[5].setOnClickListener(this);
-        networkButtons[6] = (Button) findViewById(R.id.satelliteButton) ;
-        networkButtons[6].setOnClickListener(this);
-        networkButtons[7] = (Button) findViewById(R.id.cloudButton) ;
-        networkButtons[7].setOnClickListener(this);
-        networkButtons[8] = (Button) findViewById(R.id.mainframeButton) ;
-        networkButtons[8].setOnClickListener(this);
-        networkButtons[9] = (Button) findViewById(R.id.serversBuisnessButton) ;
-        networkButtons[9].setOnClickListener(this);
-        networkButtons[10] = (Button) findViewById(R.id.atlanticCablesButton) ;
-        networkButtons[10].setOnClickListener(this);
-        networkButtons[11] = (Button) findViewById(R.id.homeRoutersButton) ;
-        networkButtons[11].setOnClickListener(this);
-        networkButtons[12] = (Button) findViewById(R.id.buisnessRoutersButton) ;
-        networkButtons[12].setOnClickListener(this);
-        networkButtons[13] = (Button) findViewById(R.id.cellTowersButton) ;
-        networkButtons[13].setOnClickListener(this);
-        networkButtons[14] = (Button) findViewById(R.id.internetProvidersButton) ;
-        networkButtons[14].setOnClickListener(this);
+        findViewById(R.id.popUpButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.programsButton).setVisibility(View.VISIBLE);
+            }
+        }); ;
+        findViewById(R.id.programsButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                infectedPrograms = true;
+                if (LAN) {
+                    findViewById(R.id.manButton).setVisibility(View.VISIBLE);
+                }
+            }
+        }); ;
+        findViewById(R.id.lanButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                LAN=true;
+                if(infectedPrograms){
+                    findViewById(R.id.manButton).setVisibility(View.VISIBLE);
+                }
+            }
+        }); ;
+        findViewById(R.id.usbButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.lanButton).setVisibility(View.VISIBLE);
+            }
+        }); ;
+        findViewById(R.id.manButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MAN=true;
+                if(satellites && mainframes && cables){
+                    findViewById(R.id.cloudButton).setVisibility(View.VISIBLE);
+                }
+            }
+        }); ;
+        findViewById(R.id.serversTCButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.satelliteButton).setVisibility(View.VISIBLE);
+            }
+        }); ;
+        findViewById(R.id.satelliteButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                satellites=true;
+                if(MAN && mainframes && cables){
+                    findViewById(R.id.cloudButton).setVisibility(View.VISIBLE);
+                }
+            }
+        }); ;
+        findViewById(R.id.mainframeButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mainframes = true;
+                if (MAN && satellites && cables) {
+                    findViewById(R.id.cloudButton).setVisibility(View.VISIBLE);
+                }
+            }
+        }); ;
+        findViewById(R.id.serversBuisnessButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.mainframeButton).setVisibility(View.VISIBLE);
+            }
+        }); ;
+
+        findViewById(R.id.atlanticCablesButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cables = true;
+                if (MAN && satellites && mainframes) {
+                    findViewById(R.id.cloudButton).setVisibility(View.VISIBLE);
+                }
+            }
+        }); ;
+        findViewById(R.id.homeRoutersButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.buisnessRoutersButton).setVisibility(View.VISIBLE);
+            }
+        }); ;
+        findViewById(R.id.buisnessRoutersButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                businessRouters = true;
+                if (cellTowers) {
+                    findViewById(R.id.atlanticCablesButton).setVisibility(View.VISIBLE);
+                }
+            }
+        }); ;
+        findViewById(R.id.cellTowersButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cellTowers = true;
+                if (businessRouters) {
+                    findViewById(R.id.atlanticCablesButton).setVisibility(View.VISIBLE);
+                }
+            }
+        }); ;
+        findViewById(R.id.internetProvidersButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                findViewById(R.id.cellTowersButton).setVisibility(View.VISIBLE);
+            }
+        }); ;
 
         tabButtons[0] = (Button) findViewById(R.id.networkingButton) ;
         tabButtons[0].setOnClickListener(this);
@@ -73,15 +185,15 @@ public class Upgrades extends AppCompatActivity implements View.OnClickListener 
         networkingLayouts[3]= (LinearLayout) findViewById(R.id.fourthRowLinearLayout) ;
         networkingLayouts[4]= (LinearLayout) findViewById(R.id.fifthRowLinearLayout) ;
 
-        networkButtons[1].setVisibility(View.INVISIBLE);
-        networkButtons[2].setVisibility(View.INVISIBLE);
-        networkButtons[4].setVisibility(View.INVISIBLE);
-        networkButtons[6].setVisibility(View.INVISIBLE);
-        networkButtons[7].setVisibility(View.INVISIBLE);
-        networkButtons[8].setVisibility(View.INVISIBLE);
-        networkButtons[10].setVisibility(View.INVISIBLE);
-        networkButtons[12].setVisibility(View.INVISIBLE);
-        networkButtons[13].setVisibility(View.INVISIBLE);
+        findViewById(R.id.programsButton).setVisibility(View.INVISIBLE);
+        findViewById(R.id.lanButton).setVisibility(View.INVISIBLE);
+        findViewById(R.id.manButton).setVisibility(View.INVISIBLE);
+        findViewById(R.id.satelliteButton).setVisibility(View.INVISIBLE);
+        findViewById(R.id.cloudButton).setVisibility(View.INVISIBLE);
+        findViewById(R.id.mainframeButton).setVisibility(View.INVISIBLE);
+        findViewById(R.id.atlanticCablesButton).setVisibility(View.INVISIBLE);
+        findViewById(R.id.buisnessRoutersButton).setVisibility(View.INVISIBLE);
+        findViewById(R.id.cellTowersButton).setVisibility(View.INVISIBLE);
 
         circularLethalityButtons[0] = (Button) findViewById(R.id.LaptopButton) ;
         circularLethalityButtons[0].setOnClickListener(this);
@@ -100,69 +212,6 @@ public class Upgrades extends AppCompatActivity implements View.OnClickListener 
 
     }
     public void onClick(View v) {
-        if(v==networkButtons[0]){
-            networkButtons[1].setVisibility(View.VISIBLE);
-        }
-        if(v==networkButtons[1]) {
-            infectedPrograms=true;
-            if(LAN)
-                networkButtons[4].setVisibility(View.VISIBLE);
-        }
-        if(v==networkButtons[2]) {
-            LAN=true;
-            if(infectedPrograms)
-                networkButtons[4].setVisibility(View.VISIBLE);
-        }
-        if(v==networkButtons[3]){
-            networkButtons[2].setVisibility(View.VISIBLE);
-        }
-        if(v==networkButtons[4]){
-            MAN=true;
-            if(satellites && mainframes && cables){
-                networkButtons[7].setVisibility(View.VISIBLE);
-            }
-        }
-        if(v==networkButtons[5]){
-            networkButtons[6].setVisibility(View.VISIBLE);
-        }
-        if(v==networkButtons[6]){
-            satellites=true;
-            if(MAN && mainframes && cables){
-                networkButtons[7].setVisibility(View.VISIBLE);
-            }
-        }
-        if(v==networkButtons[8]){
-            mainframes=true;
-            if(MAN && satellites && cables){
-                networkButtons[7].setVisibility(View.VISIBLE);
-            }
-        }
-        if(v==networkButtons[9]){
-            networkButtons[8].setVisibility(View.VISIBLE);
-        }
-        if(v==networkButtons[10]){
-            cables=true;
-            if(MAN && satellites && mainframes){
-                networkButtons[7].setVisibility(View.VISIBLE);
-            }
-        }
-        if(v==networkButtons[11]){
-            networkButtons[12].setVisibility(View.VISIBLE);
-        }
-        if(v==networkButtons[14]){
-            networkButtons[13].setVisibility(View.VISIBLE);
-        }
-        if(v==networkButtons[12]) {
-            businessRouters=true;
-            if(cellTowers)
-                networkButtons[10].setVisibility(View.VISIBLE);
-        }
-
-        if(v==networkButtons[13]) {
-            cellTowers=true;
-            if(businessRouters)
-                networkButtons[10].setVisibility(View.VISIBLE);
-        }
         if(v==tabButtons[1]){
             for(LinearLayout l: networkingLayouts){
                 l.setVisibility(View.GONE);
@@ -177,5 +226,5 @@ public class Upgrades extends AppCompatActivity implements View.OnClickListener 
     }
     public static double getNetworking(){
         return networking;
-    }
-}
+    }*/
+/*}*/
