@@ -4,9 +4,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-/**
- * Created by rayqu on 2/25/2016.
- */
+
 public class BooleanHelper extends SQLiteOpenHelper {
 
 
@@ -27,7 +25,6 @@ public class BooleanHelper extends SQLiteOpenHelper {
                 + DataOutline.KEY_value + " INTEGER )";
 
         db.execSQL(CREATE_TABLE_DATA);
-
 
 
     }

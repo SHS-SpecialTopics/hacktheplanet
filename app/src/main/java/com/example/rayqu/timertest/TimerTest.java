@@ -175,7 +175,7 @@ import java.util.List;
 
                                      if (equationVal >= 50) {
                                          suspended = true;
-                                         mySound.start();
+                                         //mySound.start();
                                      }
 
                                  }
