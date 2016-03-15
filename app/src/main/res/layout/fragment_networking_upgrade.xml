@@ -24,7 +24,8 @@
             android:layout_height="fill_parent"
             android:text="Pop_Up Apps"
             android:textSize="12sp"
-            android:id="@+id/popUpButton" />
+            android:id="@+id/popUpButton"
+            android:background="@drawable/shape"/>
         <Button
             android:layout_width="0dp"
             android:layout_weight="1"
