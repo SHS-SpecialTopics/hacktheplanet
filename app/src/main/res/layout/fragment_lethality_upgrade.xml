@@ -29,7 +29,8 @@
                 android:layout_height="fill_parent"
                 android:text="Laptop"
                 android:id="@+id/LaptopButton"
-                android:background="#FF00"/>
+                android:background="@drawable/button_redwhite"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -44,8 +45,9 @@
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
                 android:text="Desktop"
-                android:background="#FF00"
-                android:id="@+id/DesktopButton"/>
+                android:background="@drawable/button_redwhite"
+                android:id="@+id/DesktopButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -55,8 +57,9 @@
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
                 android:text="Tablets"
-                android:background="#FF00"
-                android:id="@+id/TablesButton"/>
+                android:background="@drawable/button_redwhite"
+                android:id="@+id/TablesButton"
+                android:textSize="18sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
@@ -70,9 +73,10 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
-                android:text="Ultimate Civilian Controller"
+                android:text="Ultimate Civilian\nController"
                 android:id="@+id/UCCButton"
-                android:background="#FF00"/>
+                android:background="@drawable/button_redwhite"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -87,8 +91,9 @@
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
                 android:text="Work Stations"
-                android:background="#FF00"
-                android:id="@+id/StationsButton" />
+                android:background="@drawable/button_redwhite"
+                android:id="@+id/StationsButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -98,8 +103,9 @@
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
                 android:text="Smart Phones"
-                android:background="#FF00"
-                android:id="@+id/SmartPhonesButton" />
+                android:background="@drawable/button_redwhite"
+                android:id="@+id/SmartPhonesButton"
+                android:textSize="18sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
@@ -114,8 +120,9 @@
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
                 android:text="Mobile Phones"
-                android:background="#FF00"
-                android:id="@+id/MobilePhonesButton" />
+                android:background="@drawable/button_redwhite"
+                android:id="@+id/MobilePhonesButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -141,9 +148,10 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:text="Gov Satellites"
-                android:id="@+id/GovernmentSatellitesButton"/>
+                android:id="@+id/GovernmentSatellitesButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -160,10 +168,11 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:layout_height="fill_parent"
                 android:text="ROV"
-                android:id="@+id/RovButton"/>
+                android:id="@+id/RovButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -171,10 +180,11 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:layout_height="fill_parent"
                 android:text="Wifi Scramble"
-                android:id="@+id/WifiScrammbleButton"/>
+                android:id="@+id/WifiScrammbleButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -187,24 +197,27 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:layout_height="fill_parent"
                 android:text="Warsuits"
-                android:id="@+id/WarsuitsButton"/>
+                android:id="@+id/WarsuitsButton"
+                android:textSize="18sp" />
             <Button
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
                 android:layout_weight="3"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:text="Launch Codes"
-                android:id="@+id/LaunchCodesButton"/>
+                android:id="@+id/LaunchCodesButton"
+                android:textSize="18sp" />
             <Button
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:layout_height="fill_parent"
-                android:text="Random Reboots"
-                android:id="@+id/RandomRebootsButton"/>
+                android:text="Random\nReboots"
+                android:id="@+id/RandomRebootsButton"
+                android:textSize="18sp" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="fill_parent"
@@ -218,9 +231,10 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:text="Drones"
-                android:id="@+id/DronesButton"/>
+                android:id="@+id/DronesButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -229,9 +243,10 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:text="Servers"
-                android:id="@+id/ServersButton"/>
+                android:id="@+id/ServersButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -249,9 +264,10 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="fill_parent"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:text="Mainframes"
-                android:id="@+id/Mainframe1Button"/>
+                android:id="@+id/Mainframe1Button"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"

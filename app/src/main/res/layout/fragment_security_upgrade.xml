@@ -30,7 +30,8 @@
                 android:layout_height="0dp"
                 android:text="I"
                 android:id="@+id/IButton"
-                android:background="#FF00"/>
+                android:background="@drawable/button_redwhite"
+                android:textSize="18sp" />
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -51,7 +52,8 @@
                 android:layout_height="0dp"
                 android:text="II"
                 android:id="@+id/IIButton"
-                android:background="#FF00"/>
+                android:background="@drawable/button_redwhite"
+                android:textSize="18sp" />
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -72,7 +74,8 @@
                 android:layout_height="0dp"
                 android:text="III"
                 android:id="@+id/IIIButton"
-                android:background="#FF00"/>
+                android:background="@drawable/button_redwhite"
+                android:textSize="18sp" />
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -93,7 +96,8 @@
                 android:layout_height="0dp"
                 android:text="IV"
                 android:id="@+id/IVButton"
-                android:background="#FF00"/>
+                android:background="@drawable/button_redwhite"
+                android:textSize="18sp" />
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -114,7 +118,8 @@
                 android:layout_height="0dp"
                 android:text="V"
                 android:id="@+id/VButton"
-                android:background="#FF00"/>
+                android:background="@drawable/button_redwhite"
+                android:textSize="18sp" />
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -139,11 +144,12 @@
                 android:layout_weight=".2"/>
             <Button
                 android:layout_width="0dp"
-                android:layout_weight=".1"
+                android:layout_weight="0.16"
                 android:layout_height="fill_parent"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:text="Cry Baby"
-                android:id="@+id/CryBabyButton"/>
+                android:id="@+id/CryBabyButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -159,11 +165,12 @@
                 android:layout_weight=".1"/>
             <Button
                 android:layout_width="0dp"
-                android:layout_weight=".1"
-                android:background="#FF00"
+                android:layout_weight="0.16"
+                android:background="@drawable/button_redwhite"
                 android:layout_height="fill_parent"
                 android:text="Toddlers Tantrum"
-                android:id="@+id/ToddlersTantrumButton"/>
+                android:id="@+id/ToddlersTantrumButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -178,12 +185,13 @@
                 android:layout_height="0dp"
                 android:layout_weight=".2"/>
             <Button
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:layout_weight=".1"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:text="Teen Angst"
-                android:id="@+id/TeenAngstButton"/>
+                android:id="@+id/TeenAngstButton"
+                android:textSize="18sp"
+                android:layout_weight="0.02" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -199,11 +207,12 @@
                 android:layout_weight=".3"/>
             <Button
                 android:layout_width="0dp"
-                android:layout_weight=".1"
+                android:layout_weight="0.16"
                 android:layout_height="fill_parent"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:text="Parent's Scorn"
-                android:id="@+id/ParentsScornButton"/>
+                android:id="@+id/ParentsScornButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -218,12 +227,13 @@
                 android:layout_height="0dp"
                 android:layout_weight=".2"/>
             <Button
-                android:layout_width="0dp"
-                android:layout_weight=".1"
+                android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:background="#FF00"
-                android:text="Programmer's Rage"
-                android:id="@+id/ProgrammersRageButton"/>
+                android:background="@drawable/button_redwhite"
+                android:text="Programmer&apos;s\nRage"
+                android:id="@+id/ProgrammersRageButton"
+                android:textSize="18dp"
+                android:layout_weight="0.03" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -238,12 +248,13 @@
                 android:layout_height="0dp"
                 android:layout_weight=".1"/>
             <Button
-                android:layout_width="0dp"
-                android:layout_weight=".1"
+                android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:background="#FF00"
+                android:background="@drawable/button_redwhite"
                 android:text="God's Wrath"
-                android:id="@+id/GodsWrathButton"/>
+                android:id="@+id/GodsWrathButton"
+                android:textSize="18sp"
+                android:layout_weight="0.02" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -267,11 +278,12 @@
                 android:layout_weight=".1"/>
             <Button
                 android:layout_width="0dp"
-                android:layout_weight=".1"
+                android:layout_weight="0.15"
                 android:layout_height="fill_parent"
-                android:background="#FF00"
-                android:text="Macro Virus"
-                android:id="@+id/MacroVirusButton"/>
+                android:background="@drawable/button_redwhite"
+                android:text="Macro\nVirus"
+                android:id="@+id/MacroVirusButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -287,11 +299,12 @@
                 android:layout_weight=".2"/>
             <Button
                 android:layout_width="0dp"
-                android:layout_weight=".1"
-                android:background="#FF00"
+                android:layout_weight="0.14"
+                android:background="@drawable/button_redwhite"
                 android:layout_height="fill_parent"
-                android:text="File Infector"
-                android:id="@+id/FileInfectorButton"/>
+                android:text="File\nInfector"
+                android:id="@+id/FileInfectorButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -308,10 +321,11 @@
             <Button
                 android:layout_width="0dp"
                 android:layout_height="fill_parent"
-                android:layout_weight=".1"
-                android:background="#FF00"
-                android:text="Overwrite Virus"
-                android:id="@+id/OverwriteButton"/>
+                android:layout_weight="0.14"
+                android:background="@drawable/button_redwhite"
+                android:text="Overwrite\nVirus"
+                android:id="@+id/OverwriteButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -327,11 +341,12 @@
                 android:layout_weight=".3"/>
             <Button
                 android:layout_width="0dp"
-                android:layout_weight=".1"
+                android:layout_weight="0.15"
                 android:layout_height="fill_parent"
-                android:background="#FF00"
-                android:text="Resident Virus"
-                android:id="@+id/ResidentVirusButton"/>
+                android:background="@drawable/button_redwhite"
+                android:text="Resident\nVirus"
+                android:id="@+id/ResidentVirusButton"
+                android:textSize="18sp" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
