@@ -14,11 +14,11 @@
         android:id="@+id/CircularLinearLayout"
         android:background="@drawable/border">
         <LinearLayout
-            android:layout_width="100dp"
+            android:layout_width="@dimen/layout_width"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:layout_alignParentLeft="true"
-            android:layout_marginLeft="25dp">
+            android:layout_marginLeft="@dimen/activity_horizontal_margin">
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -44,7 +44,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="100dp"
+            android:layout_width="@dimen/layout_width"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:layout_centerHorizontal="true">
@@ -71,11 +71,11 @@
                 android:id="@+id/MobilePhonesButton" />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="100dp"
+            android:layout_width="@dimen/layout_width"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="25dp">
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -109,12 +109,12 @@
         android:background="@drawable/border">
 
         <LinearLayout
-            android:layout_width="75dp"
+            android:layout_width="@dimen/layout_width_2"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:layout_alignParentLeft="true"
             android:id="@+id/firstcolumnLinearLayout"
-            android:layout_marginLeft="20dp">
+            android:layout_marginLeft="@dimen/horizontal_margin_2">
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -140,10 +140,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="75dp"
+            android:layout_width="@dimen/layout_width_2"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:layout_marginLeft="75dp">
+            android:layout_marginLeft="@dimen/horizontal_margin_4">
             <Button
                 android:layout_width="fill_parent"
                 android:layout_weight="1"
@@ -165,7 +165,7 @@
                 android:background="@drawable/optimised" />
         </LinearLayout>
         <LinearLayout
-            android:layout_width="75dp"
+            android:layout_width="@dimen/layout_width_2"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:layout_centerHorizontal="true"
@@ -187,10 +187,10 @@
                 android:layout_height="0dp"/>
         </LinearLayout>
         <LinearLayout
-            android:layout_width="75dp"
+            android:layout_width="@dimen/layout_width_2"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:layout_marginLeft="145dp">
+            android:layout_marginLeft="@dimen/horizontal_margin_3">
             <Button
                 android:layout_width="fill_parent"
                 android:layout_weight="1"
@@ -206,17 +206,17 @@
                 android:layout_width="fill_parent"
                 android:layout_weight="1"
                 android:layout_height="0dp"
-                android:text="Mianframes"
+                android:text="Mainframes"
                 android:id="@+id/Mainframe1Button"
                 android:background="@drawable/optimised" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="75dp"
+            android:layout_width="@dimen/layout_width_2"
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
+            android:layout_marginRight="@dimen/horizontal_margin_2"
             android:id="@+id/fifthcolumnlinearlayout">
             <View
                 android:layout_width="0dp"
