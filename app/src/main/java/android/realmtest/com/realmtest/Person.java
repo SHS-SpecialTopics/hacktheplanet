@@ -79,14 +79,17 @@ public class Person extends RealmObject {
 //        this.cats = cats;
 //    }
 
-    public int getTempReference() {
-        return tempReference;
-    }
 
-    public void setTempReference(int tempReference) {
-        this.tempReference = tempReference;
-    }
 
+
+//    public int getTempReference() {
+//        return tempReference;
+//    }
+//
+//    public void setTempReference(int tempReference) {
+//        this.tempReference = tempReference;
+//    }
+//
     public long getId() {
         return id;
     }

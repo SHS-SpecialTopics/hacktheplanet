@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.move_form){
-            Intent testIntent = new Intent(this, TestingActivity.class);
+            Intent testIntent = new Intent(this, VirusTest.class);
             startActivity(testIntent);
             return true;
         }

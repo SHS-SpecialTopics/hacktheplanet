@@ -22,6 +22,9 @@
             android:name=".TestingActivity"
             android:label="@string/title_activity_testing"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".VirusTest"
+            android:label="VirusTest"></activity>
     </application>
 
 </manifest>
