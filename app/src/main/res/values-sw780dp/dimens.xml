@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">15dp</dimen>
+    <dimen name="layout_width">250dp</dimen>
+    <dimen name="horizontal_margin_2">25dp</dimen>
+    <dimen name="layout_width_2">175dp</dimen>
+    <dimen name="horizontal_margin_3">310dp</dimen>
+    <dimen name="horizontal_margin_4">160dp</dimen>
+    <dimen name="vertical_margin_2">20dp</dimen>
+    <dimen name="vertical_margin_3">50dp</dimen>
+</resources>

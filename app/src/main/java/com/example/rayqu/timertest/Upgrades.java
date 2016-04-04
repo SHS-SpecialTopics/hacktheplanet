@@ -39,7 +39,6 @@ public class Upgrades extends AppCompatActivity /*implements View.OnClickListene
 
         //Setting tabs from adpater
         tabLayout.setTabsFromPagerAdapter(adapter);
-
     }
 }
 

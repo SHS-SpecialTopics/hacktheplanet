@@ -71,7 +71,6 @@ public class lethality_upgrade extends Fragment {
         view.findViewById(R.id.GovernmentSatellitesButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                view.findViewById(R.id.WifiScrammbleButton).setVisibility(View.VISIBLE);
                 view.findViewById(R.id.RovButton).setVisibility(View.VISIBLE);
                 view.findViewById(R.id.TablesButton).setClickable(false);
             }
@@ -143,7 +142,6 @@ public class lethality_upgrade extends Fragment {
             view.findViewById(R.id.SmartPhonesButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.TablesButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.UCCButton).setVisibility(View.INVISIBLE);
-            view.findViewById(R.id.WifiScrammbleButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.LaunchCodesButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.RovButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.RandomRebootsButton).setVisibility(View.INVISIBLE);
