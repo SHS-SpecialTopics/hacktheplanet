@@ -6,13 +6,14 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 
 /**
  * A simple {@link Fragment} subclass.
  */
 public class security_upgrade extends Fragment {
-
 
     public security_upgrade() {
         // Required empty public constructor

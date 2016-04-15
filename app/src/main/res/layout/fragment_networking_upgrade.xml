@@ -1,3 +1,316 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context="roy.tablayoutwithviewpager.GameFragment">
+    <LinearLayout android:layout_width="@dimen/networking_width"
+        android:layout_height="fill_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:id="@+id/middleLinearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/networking_margin_left"
+        android:layout_marginTop="@dimen/networking_margin_top">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight=".4"
+            android:layout_height="0dp" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".9"
+            android:text="MAN"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:id="@+id/manButton"
+            android:background="@drawable/optimised"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight=".2"
+            android:layout_height="0dp" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_weight=".9"
+            android:layout_height="0dp"
+            android:text="Trans-Atlantic\nCables"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:id="@+id/atlanticCablesButton"
+            android:background="@drawable/optimised" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight=".4"
+            android:layout_height="0dp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="@dimen/networking_width"
+        android:layout_height="fill_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:id="@+id/leftMiddleLinearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/networking_margin_left1"
+        android:layout_marginBottom="@dimen/networking_margin_top1"
+        android:layout_marginTop="@dimen/networking_margin_top1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="Satellite"
+            android:id="@+id/satelliteButton"
+            android:background="@drawable/optimised" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="@dimen/networking_width"
+        android:layout_height="fill_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:id="@+id/leftLinearLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/networking_margin_left2"
+        android:layout_marginBottom="@dimen/networking_margin_top1"
+        android:layout_marginTop="@dimen/networking_margin_top1">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="Infected Programs"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:id="@+id/programsButton"
+            android:background="@drawable/optimised"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:textColor="@color/black"
+            android:text="Buisness Routers"
+            android:textSize="18sp"
+            android:id="@+id/buisnessRoutersButton"
+            android:background="@drawable/optimised" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="@dimen/networking_width"
+        android:layout_height="fill_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/networking_margin_left3"
+        android:layout_marginBottom="@dimen/networking_margin_top1"
+        android:layout_marginTop="@dimen/networking_margin_top1">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Servers (TC)"
+        android:id="@+id/serversTCButton"
+        android:background="@drawable/optimised" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="@dimen/networking_width"
+        android:layout_height="fill_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/networking_margin_left4"
+        android:layout_marginBottom="@dimen/networking_margin_top1"
+        android:layout_marginTop="@dimen/networking_margin_top1">
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textColor="@color/black"
+        android:text="Pop_Up Ads"
+        android:textSize="18sp"
+        android:id="@+id/popUpButton"
+        android:background="@drawable/optimised"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:text="Home Routers"
+        android:textSize="18sp"
+        android:id="@+id/homeRoutersButton"
+        android:background="@drawable/optimised" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="@dimen/networking_width"
+        android:layout_height="fill_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/networking_margin_right"
+        android:layout_marginBottom="@dimen/networking_margin_top1"
+        android:layout_marginTop="@dimen/networking_margin_top1">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Cloud"
+        android:id="@+id/cloudButton"
+        android:background="@drawable/optimised" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="@dimen/networking_width"
+        android:layout_height="fill_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/networking_margin_right1"
+        android:layout_marginBottom="@dimen/networking_margin_top1"
+        android:layout_marginTop="@dimen/networking_margin_top1">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="LAN Connections"
+            android:textSize="18sp"
+            android:id="@+id/lanButton"
+            android:background="@drawable/optimised"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:textColor="@color/black"
+            android:text="Cell Towers"
+            android:textSize="18sp"
+            android:id="@+id/cellTowersButton"
+            android:background="@drawable/optimised" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="@dimen/networking_width"
+        android:layout_height="fill_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/networking_margin_right2"
+        android:layout_marginBottom="@dimen/networking_margin_top1"
+        android:layout_marginTop="@dimen/networking_margin_top1">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:textColor="@color/black"
+        android:text="Mainframe"
+        android:textSize="18sp"
+        android:id="@+id/mainframeButton"
+        android:background="@drawable/optimised" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="0dp" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="@dimen/networking_width"
+        android:layout_height="fill_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/networking_margin_right3"
+        android:layout_marginBottom="@dimen/networking_margin_top1"
+        android:layout_marginTop="@dimen/networking_margin_top1">
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:text="USB Connections"
+            android:textSize="18sp"
+            android:id="@+id/usbButton"
+            android:background="@drawable/optimised"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:textColor="@color/black"
+            android:text="Internet Providers"
+            android:textSize="18sp"
+            android:id="@+id/internetProvidersButton"
+            android:background="@drawable/optimised" />
+    </LinearLayout>
+    <LinearLayout android:layout_width="@dimen/networking_width"
+        android:layout_height="fill_parent"
+        android:weightSum="3"
+        android:orientation="vertical"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/networking_margin_right4"
+        android:layout_marginBottom="@dimen/networking_margin_top1"
+        android:layout_marginTop="@dimen/networking_margin_top1">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:textColor="@color/black"
+            android:text="Servers (Buisness)"
+            android:textSize="18sp"
+            android:id="@+id/serversBuisnessButton"
+            android:background="@drawable/optimised" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+<!--
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
@@ -238,4 +551,4 @@
             android:layout_weight=".5"
             android:layout_height="wrap_content" />
     </LinearLayout>
-</LinearLayout>
+</LinearLayout>-->

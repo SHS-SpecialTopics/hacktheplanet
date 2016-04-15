@@ -1,18 +1,14 @@
 package com.example.rayqu.timertest;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-
 /**
  * A simple {@link Fragment} subclass.
  */
 public class networking_upgrade extends Fragment {
-
 
     public networking_upgrade() {
         // Required empty public constructor
@@ -99,6 +95,7 @@ public class networking_upgrade extends Fragment {
                 if (MAN[0] && satellites[0] && cables[0]) {
                     view.findViewById(R.id.cloudButton).setVisibility(View.VISIBLE);
                     view.findViewById(R.id.mainframeButton).setClickable(false);
+                    view.findViewById(R.id.mainframeButton).getBackground();
                 }
             }
         }); ;
