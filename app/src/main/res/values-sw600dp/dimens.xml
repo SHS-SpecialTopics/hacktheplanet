@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="activity_horizontal_margin">5dp</dimen>
-    <dimen name="layout_width">190dp</dimen>
-    <dimen name="horizontal_margin_2">10dp</dimen>
-    <dimen name="layout_width_2">135dp</dimen>
-    <dimen name="horizontal_margin_3">235dp</dimen>
-    <dimen name="horizontal_margin_4">115dp</dimen>
-    <dimen name="vertical_margin_2">10dp</dimen>
-    <dimen name="vertical_margin_3">30dp</dimen>
+    <dimen name="activity_horizontal_margin">8dp</dimen>
+    <dimen name="activity_vertical_margin">27dp</dimen>
+    <dimen name="fab_margin">27dp</dimen>
+    <dimen name="layout_width">192dp</dimen>
+    <dimen name="horizontal_margin_2">8dp</dimen>
+    <dimen name="layout_width_2">133dp</dimen>
+    <dimen name="horizontal_margin_3">242dp</dimen>
+    <dimen name="horizontal_margin_4">117dp</dimen>
+    <dimen name="lethality_margin">110dp</dimen>
+    <dimen name="vertical_margin_2">17dp</dimen>
+    <dimen name="vertical_margin_3">80dp</dimen>
     <dimen name="networking_width">167dp</dimen>
     <dimen name="networking_margin_left">375dp</dimen>
     <dimen name="networking_margin_left1">258dp</dimen>
     <dimen name="networking_margin_left2">208dp</dimen>
     <dimen name="networking_margin_left3">100dp</dimen>
     <dimen name="networking_margin_left4">50dp</dimen>
-    <dimen name="networking_margin_right">325dp</dimen>
-    <dimen name="networking_margin_right1">283dp</dimen>
-    <dimen name="networking_margin_right2">175dp</dimen>
-    <dimen name="networking_margin_right3">125dp</dimen>
-    <dimen name="networking_margin_right4">17dp</dimen>
+    <dimen name="networking_margin_right">300dp</dimen>
+    <dimen name="networking_margin_right1">265dp</dimen>
+    <dimen name="networking_margin_right2">155dp</dimen>
+    <dimen name="networking_margin_right3">115dp</dimen>
+    <dimen name="networking_margin_right4">10dp</dimen>
     <dimen name="networking_margin_top">33dp</dimen>
     <dimen name="networking_margin_top1">50dp</dimen>
 </resources>

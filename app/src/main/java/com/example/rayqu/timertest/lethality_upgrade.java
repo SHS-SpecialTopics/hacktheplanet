@@ -18,7 +18,6 @@ public class lethality_upgrade extends Fragment {
         // Required empty public constructor
     }
 
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -108,6 +107,7 @@ public class lethality_upgrade extends Fragment {
             public void onClick(View v) {
                 view.findViewById(R.id.ServersButton).setVisibility(View.VISIBLE);
                 view.findViewById(R.id.RandomRebootsButton).setClickable(false);
+
             }
         });
         view.findViewById(R.id.ServersButton).setOnClickListener(new View.OnClickListener() {

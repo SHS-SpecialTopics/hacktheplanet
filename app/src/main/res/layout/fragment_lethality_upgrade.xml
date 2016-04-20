@@ -217,7 +217,7 @@
             android:layout_height="fill_parent"
             android:orientation="vertical"
             android:layout_alignParentRight="true"
-            android:layout_marginRight="70dp"
+            android:layout_marginRight="@dimen/lethality_margin"
             android:layout_marginTop="@dimen/vertical_margin_3"
             android:layout_marginBottom="@dimen/vertical_margin_3">
             <Button

@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="activity_horizontal_margin">10dp</dimen>
-    <dimen name="layout_width">100dp</dimen>
-    <dimen name="horizontal_margin_2">5dp</dimen>
-    <dimen name="layout_width_2">75dp</dimen>
-    <dimen name="horizontal_margin_3">130dp</dimen>
-    <dimen name="horizontal_margin_4">60dp</dimen>
-    <dimen name="vertical_margin_2">10dp</dimen>
-    <dimen name="vertical_margin_3">25dp</dimen>
-
+    <dimen name="activity_horizontal_margin">4dp</dimen>
+    <dimen name="activity_vertical_margin">14dp</dimen>
+    <dimen name="fab_margin">14dp</dimen>
+    <dimen name="layout_width">102dp</dimen>
+    <dimen name="horizontal_margin_2">4dp</dimen>
+    <dimen name="layout_width_2">71dp</dimen>
+    <dimen name="horizontal_margin_3">129dp</dimen>
+    <dimen name="horizontal_margin_4">62dp</dimen>
+    <dimen name="lethality_margin">62dp</dimen>
+    <dimen name="vertical_margin_2">9dp</dimen>
+    <dimen name="vertical_margin_3">53dp</dimen>
+    <dimen name="networking_width">89dp</dimen>
+    <dimen name="networking_margin_left">200dp</dimen>
+    <dimen name="networking_margin_left1">138dp</dimen>
+    <dimen name="networking_margin_left2">111dp</dimen>
+    <dimen name="networking_margin_left3">53dp</dimen>
+    <dimen name="networking_margin_left4">27dp</dimen>
+    <dimen name="networking_margin_right">173dp</dimen>
+    <dimen name="networking_margin_right1">151dp</dimen>
+    <dimen name="networking_margin_right2">93dp</dimen>
+    <dimen name="networking_margin_right3">67dp</dimen>
+    <dimen name="networking_margin_right4">9dp</dimen>
+    <dimen name="networking_margin_top">18dp</dimen>
+    <dimen name="networking_margin_top1">27dp</dimen>
 </resources>

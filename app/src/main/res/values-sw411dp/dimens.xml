@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="activity_horizontal_margin">5dp</dimen>
-    <dimen name="layout_width">130dp</dimen>
-    <dimen name="horizontal_margin_2">10dp</dimen>
-    <dimen name="layout_width_2">90dp</dimen>
-    <dimen name="horizontal_margin_3">170dp</dimen>
+    <dimen name="activity_horizontal_margin">6dp</dimen>
+    <dimen name="activity_vertical_margin">18dp</dimen>
+    <dimen name="fab_margin">18dp</dimen>
+    <dimen name="layout_width">131dp</dimen>
+    <dimen name="horizontal_margin_2">6dp</dimen>
+    <dimen name="layout_width_2">91dp</dimen>
+    <dimen name="horizontal_margin_3">168dp</dimen>
     <dimen name="horizontal_margin_4">80dp</dimen>
+    <dimen name="lethality_margin">80dp</dimen>
+    <dimen name="vertical_margin_2">11dp</dimen>
+    <dimen name="vertical_margin_3">69dp</dimen>
     <dimen name="networking_width">114dp</dimen>
     <dimen name="networking_margin_left">260dp</dimen>
     <dimen name="networking_margin_left1">177dp</dimen>
