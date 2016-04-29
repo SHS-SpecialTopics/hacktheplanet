@@ -1,7 +1,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/WholeScreenLinearLayout"
     android:weightSum="2"
@@ -47,7 +47,6 @@
                 android:layout_height="0dp"
                 android:layout_weight=".5"/>
         </LinearLayout>
-
         <LinearLayout
             android:layout_width="@dimen/layout_width"
             android:layout_height="fill_parent"

@@ -24,4 +24,12 @@
     <dimen name="networking_margin_right4">10dp</dimen>
     <dimen name="networking_margin_top">20dp</dimen>
     <dimen name="networking_margin_top1">30dp</dimen>
+    <dimen name="security_width_1">50dp</dimen>
+    <dimen name="security_width_2">75dp</dimen>
+    <dimen name="security_margin_left_right">5dp</dimen>
+    <dimen name="security_margin_top_bottom">80dp</dimen>
+    <dimen name="security_margin_top_1">30dp</dimen>
+    <dimen name="security_margin_bottom_1">20dp</dimen>
+    <dimen name="security_margin_left_1">39dp</dimen>
+    <dimen name="security_margin_right_1">40dp</dimen>
 </resources>
