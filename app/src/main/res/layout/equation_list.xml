@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/LogGrowthText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Logistic Growth Equation With Changing Carrying Capacity"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/LogGrowthEdit"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Insert Shit Here"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/SecurityText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="Security Equation that includes Security Values, Panic, Time, and Shuffle"/>
+
+    <EditText
+        android:id="@+id/SecurityEdit"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Insert Shit Here"
+        android:textSize="30sp"/>
+
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:text="Time"
+        android:textSize="30sp"
+        android:layout_marginTop="340dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+
+</LinearLayout>

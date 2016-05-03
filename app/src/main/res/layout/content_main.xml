@@ -12,14 +12,59 @@
     tools:context="android.realmtest.com.realmtest.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
+
+    <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello User Please Proceed to The Next Form"
-        android:textSize="100sp"
-        android:layout_centerVertical="true"
+        android:id="@+id/listViewVirus"
         android:layout_centerHorizontal="true"
-        android:textAlignment="center" />
+        android:textAlignment="center"
+        android:foregroundGravity="center"/>
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            tools:context="android.realmtest.com.realmtest.MainActivity"
+            tools:showIn="@layout/activity_main"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/Centerer">
+
+            <Button
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:text="Game Data One"
+                android:id="@+id/Game1"
+                android:textSize="40sp"
+                android:onClick="openGameOne"
+                android:layout_centerVertical="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="400dp"
+                android:layout_height="300dp"
+                android:text="Change Every Networking \n Number by .05"
+                android:id="@+id/ChangeProp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:textSize="40sp"
+                android:onClick="changeNetworking"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="100dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Equation Screen"
+                android:id="@+id/equationButton"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:onClick="equationChange" />
+
+        </RelativeLayout>
 
 
 </RelativeLayout>

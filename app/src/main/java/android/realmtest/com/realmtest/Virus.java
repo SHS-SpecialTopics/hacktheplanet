@@ -11,10 +11,15 @@ public class Virus extends RealmObject{
 
     private String name;
     private String category;
-    private double value;
+    private double networkingValue;
+    private double lethalityValue;
+    private double securityValue;
+
+    private boolean purchased = false;
+
     private long id;
 
-//  Other objects in a one-to-one relation must also subclass RealmObject
+    //  Other objects in a one-to-one relation must also subclass RealmObject
 
 //  private Dog dog;
 //
@@ -40,12 +45,28 @@ public class Virus extends RealmObject{
         this.category = cat;
     }
 
-    public double getValue(){
-        return value;
+    public double getNetworkingValue(){
+        return networkingValue;
     }
 
-    public void setValue(double val) {
-        this.value = val;
+    public void setNetworkingValue(double val) {
+        this.networkingValue = val;
+    }
+
+    public double getLethalityValue(){
+        return lethalityValue;
+    }
+
+    public void setLethalityValue(double lethal){
+        this.lethalityValue = lethal;
+    }
+
+    public double getSecurityValue(){
+        return securityValue;
+    }
+
+    public void setSecurityValue(double secure) {
+        this.securityValue = secure;
     }
 
     public long getId() {
@@ -56,18 +77,12 @@ public class Virus extends RealmObject{
         this.id = id;
     }
 
-//    public String toString(){
-//        return "I AM HERE! ";
-//    }
+    public boolean getPurchased(){
+        return purchased;
+    }
 
-
-    //Gonna need this for a GAME object
-//    public RealmList<Cat> getCats() {
-//        return cats;
-//    }
-//
-//    public void setCats(RealmList<Cat> cats) {
-//        this.cats = cats;
-//    }
+    public void setPurchased(boolean boughtIt) {
+        purchased = boughtIt;
+    }
 
 }

@@ -25,6 +25,8 @@
         <activity
             android:name=".VirusTest"
             android:label="VirusTest"></activity>
+        <activity android:name=".EquationList"
+            android:label="EquationList"></activity>
     </application>
 
 </manifest>
