@@ -16,7 +16,6 @@ public  class  Global extends Application {
         this.openedYet = openNow;
     }
 
-
     private BooleanActions yanksOut = new BooleanActions(this);
 
     private BooleanOutline yanksIn = new BooleanOutline();

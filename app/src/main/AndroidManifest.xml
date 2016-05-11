@@ -28,7 +28,6 @@
         <activity android:name=".Upgrades"
             android:screenOrientation="landscape"/>
 
-        <activity android:name=".myDatabase"/>
 
     </application>
 
