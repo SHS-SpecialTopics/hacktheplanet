@@ -135,7 +135,7 @@ public class lethality_upgrade extends Fragment {
                 }
             }
         });
-        if(savedInstanceState == null) {
+        /*if(savedInstanceState == null) {
             view.findViewById(R.id.DesktopButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.StationsButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.MobilePhonesButton).setVisibility(View.INVISIBLE);
@@ -150,7 +150,7 @@ public class lethality_upgrade extends Fragment {
             view.findViewById(R.id.DronesButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.WarsuitsButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.RovButton).setVisibility(View.INVISIBLE);
-        }
+        }*/
         return view;
     }
 

@@ -1,7 +1,9 @@
 package com.example.rayqu.timertest;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +23,7 @@ public class Upgrades extends AppCompatActivity /*implements View.OnClickListene
         setContentView(R.layout.networking_upgrades);
 
         pager= (ViewPager) findViewById(R.id.view_pager);
+        pager.setOffscreenPageLimit(3);
         tabLayout= (TabLayout) findViewById(R.id.tab_layout);
         // Fragment manager to add fragment in viewpager we will pass object of Fragment manager to adpater class.
         FragmentManager manager=getSupportFragmentManager();
@@ -41,5 +44,3 @@ public class Upgrades extends AppCompatActivity /*implements View.OnClickListene
         tabLayout.setTabsFromPagerAdapter(adapter);
     }
 }
-
-   /*}*/

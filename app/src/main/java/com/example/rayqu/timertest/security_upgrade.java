@@ -116,7 +116,7 @@ public class security_upgrade extends Fragment {
             }
         });
 
-        if(savedInstanceState == null) {
+        /*if(savedInstanceState == null) {
             view.findViewById(R.id.IIButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.IIIButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.IVButton).setVisibility(View.INVISIBLE);
@@ -129,7 +129,7 @@ public class security_upgrade extends Fragment {
             view.findViewById(R.id.FileInfectorButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.OverwriteButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.ResidentVirusButton).setVisibility(View.INVISIBLE);
-        }
+        }*/
         return view;
     }
 

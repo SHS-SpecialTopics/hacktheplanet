@@ -24,9 +24,10 @@
             android:layout_weight=".9"
             android:text="MAN"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/networking_text_size"
             android:id="@+id/manButton"
-            android:background="@drawable/optimised"/>
+            android:background="@drawable/optimised"
+            android:visibility="invisible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight=".2"
@@ -35,11 +36,12 @@
             android:layout_width="fill_parent"
             android:layout_weight=".9"
             android:layout_height="0dp"
-            android:text="Trans-Atlantic\nCables"
+            android:text="Trans-\nAtlantic\nCables"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/networking_text_size"
             android:id="@+id/atlanticCablesButton"
-            android:background="@drawable/optimised" />
+            android:background="@drawable/optimised"
+            android:visibility="invisible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight=".4"
@@ -63,10 +65,11 @@
             android:layout_weight="1"
             android:layout_height="0dp"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/networking_text_size"
             android:text="Satellite"
             android:id="@+id/satelliteButton"
-            android:background="@drawable/optimised" />
+            android:background="@drawable/optimised"
+            android:visibility="invisible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight="1"
@@ -85,11 +88,12 @@
             android:layout_width="fill_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:text="Infected Programs"
+            android:text="Infected\nPrograms"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="@dimen/networking_text_size"
             android:id="@+id/programsButton"
-            android:background="@drawable/optimised"/>
+            android:background="@drawable/optimised"
+            android:visibility="invisible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight="1"
@@ -99,10 +103,11 @@
             android:layout_weight="1"
             android:layout_height="0dp"
             android:textColor="@color/black"
-            android:text="Buisness Routers"
-            android:textSize="18sp"
+            android:text="Buisness\nRouters"
+            android:textSize="@dimen/networking_text_size"
             android:id="@+id/buisnessRoutersButton"
-            android:background="@drawable/optimised" />
+            android:background="@drawable/optimised"
+            android:visibility="invisible"/>
     </LinearLayout>
     <LinearLayout android:layout_width="@dimen/networking_width"
         android:layout_height="fill_parent"
@@ -121,8 +126,8 @@
         android:layout_weight="1"
         android:layout_height="0dp"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        android:text="Servers (TC)"
+        android:textSize="@dimen/networking_text_size"
+        android:text="Servers\n(TC)"
         android:id="@+id/serversTCButton"
         android:background="@drawable/optimised" />
     <TextView
@@ -143,8 +148,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:textColor="@color/black"
-        android:text="Pop_Up Ads"
-        android:textSize="18sp"
+        android:text="Pop_Up \nAds"
+        android:textSize="@dimen/networking_text_size"
         android:id="@+id/popUpButton"
         android:background="@drawable/optimised"/>
     <TextView
@@ -156,8 +161,8 @@
         android:layout_weight="1"
         android:layout_height="0dp"
         android:textColor="@color/black"
-        android:text="Home Routers"
-        android:textSize="18sp"
+        android:text="Home \nRouters"
+        android:textSize="@dimen/networking_text_size"
         android:id="@+id/homeRoutersButton"
         android:background="@drawable/optimised" />
     </LinearLayout>
@@ -178,10 +183,11 @@
         android:layout_weight="1"
         android:layout_height="0dp"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="@dimen/networking_text_size"
         android:text="Cloud"
         android:id="@+id/cloudButton"
-        android:background="@drawable/optimised" />
+        android:background="@drawable/optimised"
+        android:visibility="invisible"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_weight="1"
@@ -200,10 +206,11 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:text="LAN Connections"
-            android:textSize="18sp"
+            android:text="LAN\nConnections"
+            android:textSize="@dimen/networking_text_size"
             android:id="@+id/lanButton"
-            android:background="@drawable/optimised"/>
+            android:background="@drawable/optimised"
+            android:visibility="invisible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight="1"
@@ -213,10 +220,11 @@
             android:layout_weight="1"
             android:layout_height="0dp"
             android:textColor="@color/black"
-            android:text="Cell Towers"
-            android:textSize="18sp"
+            android:text="Cell\nTowers"
+            android:textSize="@dimen/networking_text_size"
             android:id="@+id/cellTowersButton"
-            android:background="@drawable/optimised" />
+            android:background="@drawable/optimised"
+            android:visibility="invisible"/>
     </LinearLayout>
     <LinearLayout android:layout_width="@dimen/networking_width"
         android:layout_height="fill_parent"
@@ -226,19 +234,20 @@
         android:layout_marginRight="@dimen/networking_margin_right2"
         android:layout_marginBottom="@dimen/networking_margin_top1"
         android:layout_marginTop="@dimen/networking_margin_top1">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_weight="1"
-        android:layout_height="0dp" />
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_weight="1"
-        android:layout_height="0dp"
-        android:textColor="@color/black"
-        android:text="Mainframe"
-        android:textSize="18sp"
-        android:id="@+id/mainframeButton"
-        android:background="@drawable/optimised" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="0dp" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:textColor="@color/black"
+            android:text="Mainframe"
+            android:textSize="@dimen/networking_text_size"
+            android:id="@+id/mainframeButton"
+            android:background="@drawable/optimised"
+            android:visibility="invisible"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_weight="1"
@@ -257,8 +266,8 @@
             android:layout_height="0dp"
             android:layout_weight="1"
             android:textColor="@color/black"
-            android:text="USB Connections"
-            android:textSize="18sp"
+            android:text="USB\nConnections"
+            android:textSize="@dimen/networking_text_size"
             android:id="@+id/usbButton"
             android:background="@drawable/optimised"/>
         <TextView
@@ -270,8 +279,8 @@
             android:layout_weight="1"
             android:layout_height="0dp"
             android:textColor="@color/black"
-            android:text="Internet Providers"
-            android:textSize="18sp"
+            android:text="Internet\nProviders"
+            android:textSize="@dimen/networking_text_size"
             android:id="@+id/internetProvidersButton"
             android:background="@drawable/optimised" />
     </LinearLayout>
@@ -292,264 +301,14 @@
             android:layout_weight="1"
             android:layout_height="0dp"
             android:textColor="@color/black"
-            android:text="Servers (Buisness)"
-            android:textSize="18sp"
+            android:text="Servers \n(Buisness)"
+            android:textSize="@dimen/networking_text_size"
             android:id="@+id/serversBuisnessButton"
-            android:background="@drawable/optimised" />
+            android:background="@drawable/optimised"
+            android:visibility="visible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight="1"
             android:layout_height="0dp" />
     </LinearLayout>
 </RelativeLayout>
-
-
-
-
-
-
-
-
-
-<!--
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="fill_parent"
-    android:id="@+id/WholeScreenLinearLayout"
-    android:weightSum="5"
-    tools:context="roy.tablayoutwithviewpager.GameFragment"
-    android:background="#000000">
-
-    <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:weightSum="6"
-        android:orientation="horizontal"
-        android:id="@+id/firstRowLinearLayout"
-        android:layout_alignParentTop="true">
-        <TextView
-            android:layout_width="0dp"
-            android:layout_weight=".5"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Pop_Up Ads"
-            android:textSize="18sp"
-            android:id="@+id/popUpButton"
-            android:background="@drawable/button_redwhite"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Infected Programs"
-            android:textSize="18sp"
-            android:id="@+id/programsButton"
-            android:background="@drawable/button_redwhite" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="LAN Connections"
-            android:textSize="18sp"
-            android:id="@+id/lanButton"
-            android:background="@drawable/button_redwhite" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="USB Connections"
-            android:textSize="18sp"
-            android:id="@+id/usbButton"
-            android:background="@drawable/button_redwhite" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight=".5"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-
-    <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_below="@id/firstRowLinearLayout"
-        android:weightSum="5"
-        android:orientation="horizontal"
-        android:id="@+id/secondRowlinearLayout">
-
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:visibility="invisible"/>
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="MAN"
-            android:id="@+id/manButton"
-            android:background="@drawable/button_redwhite"
-            android:textSize="18sp" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_below="@id/secondRowlinearLayout"
-        android:weightSum="6"
-        android:orientation="horizontal"
-        android:id="@+id/thirdRowlinearLayout">
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Servers (TC)"
-            android:id="@+id/serversTCButton"
-            android:background="@drawable/button_redwhite"
-            android:textSize="18sp" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Satellite"
-            android:id="@+id/satelliteButton"
-            android:background="@drawable/button_redwhite"
-            android:textSize="18sp" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Cloud"
-            android:id="@+id/cloudButton"
-            android:background="@drawable/button_redwhite"
-            android:textSize="18sp" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Mainframe"
-            android:textSize="18sp"
-            android:id="@+id/mainframeButton"
-            android:background="@drawable/button_redwhite" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Servers (Buisness)"
-            android:id="@+id/serversBuisnessButton"
-            android:background="@drawable/button_redwhite"
-            android:textSize="18sp" />
-
-    </LinearLayout>
-
-    <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_below="@id/thirdRowlinearLayout"
-        android:weightSum="5"
-        android:orientation="horizontal"
-        android:id="@+id/fourthRowLinearLayout">
-
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Trans-Atlantic\nCables"
-            android:textSize="18sp"
-            android:id="@+id/atlanticCablesButton"
-            android:background="@drawable/button_redwhite" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
-
-    <LinearLayout android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_below="@id/fourthRowLinearLayout"
-        android:weightSum="6"
-        android:orientation="horizontal"
-        android:id="@+id/fifthRowLinearLayout">
-        <View
-            android:layout_width="0dp"
-            android:layout_weight=".5"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Home Routers"
-            android:textSize="18sp"
-            android:id="@+id/homeRoutersButton"
-            android:background="@drawable/button_redwhite" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Buisness Routers"
-            android:textSize="18sp"
-            android:id="@+id/buisnessRoutersButton"
-            android:background="@drawable/button_redwhite" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="wrap_content" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Cell Towers"
-            android:textSize="18sp"
-            android:id="@+id/cellTowersButton"
-            android:background="@drawable/button_redwhite" />
-        <Button
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:layout_height="fill_parent"
-            android:text="Internet Providers"
-            android:textSize="18sp"
-            android:id="@+id/internetProvidersButton"
-            android:background="@drawable/button_redwhite" />
-        <View
-            android:layout_width="0dp"
-            android:layout_weight=".5"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-</LinearLayout>-->

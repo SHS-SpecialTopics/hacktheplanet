@@ -1,5 +1,6 @@
 package com.example.rayqu.timertest;
 
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -151,7 +152,7 @@ public class networking_upgrade extends Fragment {
                 view.findViewById(R.id.internetProvidersButton).setClickable(false);
             }
         }); ;
-        if(savedInstanceState == null) {
+        /*if(savedInstanceState == null) {
             view.findViewById(R.id.programsButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.lanButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.manButton).setVisibility(View.INVISIBLE);
@@ -161,7 +162,7 @@ public class networking_upgrade extends Fragment {
             view.findViewById(R.id.atlanticCablesButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.buisnessRoutersButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.cellTowersButton).setVisibility(View.INVISIBLE);
-        }
+        }*/
         // Inflate the layout for this fragment
         return view;
     }
