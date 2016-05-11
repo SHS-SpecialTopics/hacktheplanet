@@ -34,7 +34,7 @@ public class networking_upgrade extends Fragment {
                 view.findViewById(R.id.programsButton).setVisibility(View.VISIBLE);
                 view.findViewById(R.id.popUpButton).setClickable(false);
             }
-        }); ;
+        });
         view.findViewById(R.id.programsButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,7 +44,7 @@ public class networking_upgrade extends Fragment {
                     view.findViewById(R.id.programsButton).setClickable(false);
                 }
             }
-        }); ;
+        });
         view.findViewById(R.id.lanButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,14 +54,14 @@ public class networking_upgrade extends Fragment {
                     view.findViewById(R.id.lanButton).setClickable(false);
                 }
             }
-        }); ;
+        });
         view.findViewById(R.id.usbButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.lanButton).setVisibility(View.VISIBLE);
                 view.findViewById(R.id.usbButton).setClickable(false);
             }
-        }); ;
+        });
         view.findViewById(R.id.manButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -71,14 +71,14 @@ public class networking_upgrade extends Fragment {
                     view.findViewById(R.id.manButton).setClickable(false);
                 }
             }
-        }); ;
+        });
         view.findViewById(R.id.serversTCButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.satelliteButton).setVisibility(View.VISIBLE);
                 view.findViewById(R.id.serversTCButton).setClickable(false);
             }
-        }); ;
+        });
         view.findViewById(R.id.satelliteButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -88,7 +88,7 @@ public class networking_upgrade extends Fragment {
                     view.findViewById(R.id.satelliteButton).setClickable(false);
                 }
             }
-        }); ;
+        });
         view.findViewById(R.id.mainframeButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,14 +99,14 @@ public class networking_upgrade extends Fragment {
                     view.findViewById(R.id.mainframeButton).getBackground();
                 }
             }
-        }); ;
+        });
         view.findViewById(R.id.serversBuisnessButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.mainframeButton).setVisibility(View.VISIBLE);
                 view.findViewById(R.id.serversBuisnessButton).setClickable(false);
             }
-        }); ;
+        });
 
         view.findViewById(R.id.atlanticCablesButton).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,14 +117,14 @@ public class networking_upgrade extends Fragment {
                     view.findViewById(R.id.atlanticCablesButton).setClickable(false);
                 }
             }
-        }); ;
+        });
         view.findViewById(R.id.homeRoutersButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.buisnessRoutersButton).setVisibility(View.VISIBLE);
                 view.findViewById(R.id.homeRoutersButton).setClickable(false);
             }
-        }); ;
+        });
         view.findViewById(R.id.buisnessRoutersButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -134,7 +134,7 @@ public class networking_upgrade extends Fragment {
                     view.findViewById(R.id.buisnessRoutersButton).setClickable(false);
                 }
             }
-        }); ;
+        });
         view.findViewById(R.id.cellTowersButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -144,14 +144,14 @@ public class networking_upgrade extends Fragment {
                     view.findViewById(R.id.cellTowersButton).setClickable(false);
                 }
             }
-        }); ;
+        });
         view.findViewById(R.id.internetProvidersButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.cellTowersButton).setVisibility(View.VISIBLE);
                 view.findViewById(R.id.internetProvidersButton).setClickable(false);
             }
-        }); ;
+        });
         /*if(savedInstanceState == null) {
             view.findViewById(R.id.programsButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.lanButton).setVisibility(View.INVISIBLE);

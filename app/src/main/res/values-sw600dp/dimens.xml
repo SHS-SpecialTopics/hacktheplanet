@@ -32,6 +32,7 @@
     <dimen name="security_margin_bottom_1">33dp</dimen>
     <dimen name="security_margin_left_1">65dp</dimen>
     <dimen name="security_margin_right_1">67dp</dimen>
-    <dimen name="text_size">18sp</dimen>
+    <dimen name="text_size">15sp</dimen>
     <dimen name="networking_text_size">17dp</dimen>
+    <dimen name="security_text_size">16dp</dimen>
 </resources>

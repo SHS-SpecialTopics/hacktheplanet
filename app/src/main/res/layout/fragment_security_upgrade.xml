@@ -34,7 +34,7 @@
                 android:textColor="@color/black"
                 android:id="@+id/IButton"
                 android:background="@drawable/optimised"
-                android:textSize="18sp" />
+                android:textSize="@dimen/security_text_size" />
             <View
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -59,7 +59,7 @@
                 android:textColor="@color/black"
                 android:id="@+id/IIButton"
                 android:background="@drawable/optimised"
-                android:textSize="18sp"
+                android:textSize="@dimen/security_text_size"
                 android:visibility="invisible"/>
             <View
                 android:layout_width="fill_parent"
@@ -85,7 +85,7 @@
                 android:textColor="@color/black"
                 android:id="@+id/IIIButton"
                 android:background="@drawable/optimised"
-                android:textSize="18sp"
+                android:textSize="@dimen/security_text_size"
                 android:visibility="invisible"/>
             <View
                 android:layout_width="fill_parent"
@@ -112,7 +112,7 @@
                 android:textColor="@color/black"
                 android:id="@+id/IVButton"
                 android:background="@drawable/optimised"
-                android:textSize="18sp"
+                android:textSize="@dimen/security_text_size"
                 android:visibility="invisible"/>
             <View
                 android:layout_width="fill_parent"
@@ -139,7 +139,7 @@
                 android:textColor="@color/black"
                 android:id="@+id/VButton"
                 android:background="@drawable/optimised"
-                android:textSize="18sp"
+                android:textSize="@dimen/security_text_size"
                 android:visibility="invisible"/>
             <View
                 android:layout_width="fill_parent"
@@ -171,7 +171,7 @@
                 android:text="Cry \nBaby"
                 android:textColor="@color/black"
                 android:id="@+id/CryBabyButton"
-                android:textSize="12sp" />
+                android:textSize="@dimen/security_text_size" />
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
@@ -180,7 +180,7 @@
                 android:textColor="@color/black"
                 android:text="Teen \nAngst"
                 android:id="@+id/TeenAngstButton"
-                android:textSize="12sp"
+                android:textSize="@dimen/security_text_size"
                 android:visibility="invisible"/>
             <View
                 android:layout_width="0dp"
@@ -205,9 +205,9 @@
                 android:background="@drawable/optimised"
                 android:textColor="@color/black"
                 android:layout_height="0dp"
-                android:text="Toddlers Tantrum"
+                android:text="Toddler's \nTantrum"
                 android:id="@+id/ToddlersTantrumButton"
-                android:textSize="12sp"
+                android:textSize="@dimen/security_text_size"
                 android:visibility="invisible"/>
             <Button
                 android:layout_width="fill_parent"
@@ -215,18 +215,18 @@
                 android:layout_height="0dp"
                 android:background="@drawable/optimised"
                 android:textColor="@color/black"
-                android:text="Parent's Scorn"
+                android:text="Parent's \nScorn"
                 android:id="@+id/ParentsScornButton"
-                android:textSize="12sp"
+                android:textSize="@dimen/security_text_size"
                 android:visibility="invisible"/>
             <Button
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:background="@drawable/optimised"
-                android:text="Programmer&apos;s\nRage"
+                android:text="Prog\nrammer&apos;s\nRage"
                 android:id="@+id/ProgrammersRageButton"
                 android:textColor="@color/black"
-                android:textSize="12dp"
+                android:textSize="@dimen/security_text_size"
                 android:layout_weight="1"
                 android:visibility="invisible"/>
             <View
@@ -251,10 +251,10 @@
                 android:layout_width="fill_parent"
                 android:layout_height="0dp"
                 android:background="@drawable/optimised"
-                android:text="God's Wrath"
+                android:text="God's \nWrath"
                 android:id="@+id/GodsWrathButton"
                 android:textColor="@color/black"
-                android:textSize="12sp"
+                android:textSize="@dimen/security_text_size"
                 android:layout_weight="1"
                 android:visibility="invisible"/>
             <View
@@ -292,8 +292,7 @@
                 android:textColor="@color/black"
                 android:text="Macro\nVirus"
                 android:id="@+id/MacroVirusButton"
-                android:textSize="12sp"
-                android:visibility="visible"/>
+                android:textSize="@dimen/security_text_size" />
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -319,7 +318,7 @@
                 android:text="File\nInfector"
                 android:textColor="@color/black"
                 android:id="@+id/FileInfectorButton"
-                android:textSize="12sp"
+                android:textSize="@dimen/security_text_size"
                 android:visibility="invisible"/>
             <Button
                 android:layout_width="fill_parent"
@@ -329,7 +328,7 @@
                 android:text="Overwrite\nVirus"
                 android:textColor="@color/black"
                 android:id="@+id/OverwriteButton"
-                android:textSize="12sp"
+                android:textSize="@dimen/security_text_size"
                 android:visibility="invisible"/>
             <View
                 android:layout_width="0dp"
@@ -357,7 +356,7 @@
                 android:text="Resident\nVirus"
                 android:textColor="@color/black"
                 android:id="@+id/ResidentVirusButton"
-                android:textSize="12sp"
+                android:textSize="@dimen/security_text_size"
                 android:visibility="invisible"/>
             <View
                 android:layout_width="0dp"

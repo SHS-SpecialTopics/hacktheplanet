@@ -24,14 +24,15 @@
     <dimen name="networking_margin_right4">9dp</dimen>
     <dimen name="networking_margin_top">18dp</dimen>
     <dimen name="networking_margin_top1">27dp</dimen>
-    <dimen name="security_width_1">50dp</dimen>
+    <dimen name="security_width_1">45dp</dimen>
     <dimen name="security_width_2">67dp</dimen>
     <dimen name="security_margin_left_right">4dp</dimen>
     <dimen name="security_margin_top_bottom">90dp</dimen>
     <dimen name="security_margin_top_1">27dp</dimen>
     <dimen name="security_margin_bottom_1">18dp</dimen>
-    <dimen name="security_margin_left_1">39dp</dimen>
-    <dimen name="security_margin_right_1">39dp</dimen>
-    <dimen name="text_size">10sp</dimen>
+    <dimen name="security_margin_left_1">35dp</dimen>
+    <dimen name="security_margin_right_1">35dp</dimen>
+    <dimen name="text_size">8sp</dimen>
     <dimen name="networking_text_size">10dp</dimen>
+    <dimen name="security_text_size">8dp</dimen>
 </resources>
