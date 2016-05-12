@@ -1,11 +1,14 @@
 package com.example.rayqu.timertest;
 
 import android.app.FragmentManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -32,7 +35,10 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.programsButton).setVisibility(View.VISIBLE);
+                Button button= (Button) view.findViewById(R.id.popUpButton);
+                button.setTextColor(Color.parseColor("#FF00"));
                 view.findViewById(R.id.popUpButton).setClickable(false);
+
             }
         });
         view.findViewById(R.id.programsButton).setOnClickListener(new View.OnClickListener() {
