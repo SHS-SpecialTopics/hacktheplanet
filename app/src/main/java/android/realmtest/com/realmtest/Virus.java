@@ -17,6 +17,9 @@ public class Virus extends RealmObject{
 
     private boolean purchased = false;
 
+    private boolean lethalityG = false;
+    private boolean lethalityC = false;
+
     private long id;
 
     //  Other objects in a one-to-one relation must also subclass RealmObject
@@ -84,5 +87,25 @@ public class Virus extends RealmObject{
     public void setPurchased(boolean boughtIt) {
         purchased = boughtIt;
     }
+
+    public boolean getLethalityG(){
+        return lethalityG;
+    }
+
+    public void setLethalityG(boolean G_or_Nah){
+        lethalityG = G_or_Nah;
+    }
+
+    public boolean getLethalityC() {
+        return lethalityC;
+    }
+
+    public void setLethalityC(boolean C_or_Nah){
+        lethalityC = C_or_Nah;
+    }
+
+
+
+
 
 }

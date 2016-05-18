@@ -22,6 +22,8 @@ import android.widget.Toast;
 
 import junit.framework.Test;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -42,10 +44,7 @@ public class MainActivity extends AppCompatActivity {
     RealmList<Virus> virusList;
     ArrayList<String> virusListView = new ArrayList<String>();
 
-
-
     int timerCount = 0;
-
 
     String[] securityStrings = { "Code Scrambler I", "Code Scrambler II", "Code Scrambler III",
             "Code Scrambler IV", "Code Scrambler V", "Cry Baby", "Toddler's Tantrum",
@@ -69,6 +68,16 @@ public class MainActivity extends AppCompatActivity {
     double[] networkingVals = {0.025,0.025,0.025,0.025,0.050,0.050,0.050,0.050,0.100,0.100,0.125,0.125,0.200,0.200,0.450};
 
 
+
+
+
+
+    //Make a Lethality G and Lethality C that controls panic and carrying cap respectively
+
+
+
+
+
     //Now make the number arrays for the above
     //Remember that some of the security (scramblers) have different type of numbers for there values
 
@@ -78,14 +87,22 @@ public class MainActivity extends AppCompatActivity {
     myDate time = new myDate(0);
     double equationVal;
 
-    //Need True Values
     double security = 0;
-    double panic = 0;
+    double panic = 1;
+    //Need panic to change according to??
     int shuffle = 0;
     double networking = 0;
     double lethality = 0;
-    double trueMid = 50;
 
+    double trueMid = 0;
+
+    boolean securityHelper = false;
+    boolean networkingHelper = false;
+    boolean lethalityHelper = false;
+
+    boolean reCalcMidPoint = false;
+
+    double carryCap = 100;
 
 
     @Override
@@ -113,7 +130,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
     public void openGameOne(View view){
+
         realmConfig = new RealmConfiguration.Builder(this).build();
 
         realm = Realm.getInstance(realmConfig);
@@ -127,8 +146,8 @@ public class MainActivity extends AppCompatActivity {
         realm.commitTransaction();
 
 
-        if (game1 == null)
-        {
+        if (game1 == null) {
+
         realm.beginTransaction();
             game1 = realm.createObject(Game.class);
             game1.setName("Game1Bitch");
@@ -140,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
 
             //REMEMBER TO ACTUALLY SET THE VIRUSES TO HAVE THE CORRECT VALUE IN THE CORRECT VALUE-SET
             //LIKE PUTTING LETHALITY VALUES IN THE setLethalityValue METHOD (LOOK!!!!)
-
 
             for(int i = 0; i < securityStrings.length; i++) {
                 Virus looper = new Virus();
@@ -158,6 +176,15 @@ public class MainActivity extends AppCompatActivity {
                 looper.setLethalityValue(lethalityVals[i]);
                 looper.setId(i);
                 virusList.add(looper);
+
+                if(i < 7){
+                    looper.setLethalityC(true);
+                }
+
+                if(i > 6){
+                    looper.setLethalityG(true);
+                }
+
             }
 
             for(int i = 0; i < networkingStrings.length; i++) {
@@ -174,7 +201,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(MainActivity.this, "Game1 Created", Toast.LENGTH_SHORT).show();
 
-            panic = 1;
+            //panic = 1;
 
             virusList = game1.getVirusList();
 
@@ -202,14 +229,20 @@ public class MainActivity extends AppCompatActivity {
 
                     String useThis = "";
 
+                    realm.beginTransaction();
+
                     if(helpMeAgain.getNetworkingValue() != 0)
                     {
                         useThis = helpMeAgain.getNetworkingValue() + "";
                         Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis, Toast.LENGTH_SHORT).show();
 
                         if(helpMeAgain.getPurchased() == false) {
+
+                            networkingHelper = helpMeAgain.getPurchased();
+                            networkingHelper = true;
+
                             networking = networking + helpMeAgain.getNetworkingValue();
-                            helpMeAgain.setPurchased(true);
+                            helpMeAgain.setPurchased(networkingHelper);
                         }
                     }
                     else if(helpMeAgain.getSecurityValue() != 0)
@@ -218,8 +251,12 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis, Toast.LENGTH_SHORT).show();
 
                         if(helpMeAgain.getPurchased() == false) {
+
+                            securityHelper = helpMeAgain.getPurchased();
+                            securityHelper = true;
+
                             security = security + helpMeAgain.getSecurityValue();
-                            helpMeAgain.setPurchased(true);
+                            helpMeAgain.setPurchased(securityHelper);
                         }
 
 
@@ -227,13 +264,19 @@ public class MainActivity extends AppCompatActivity {
                     else
                     {
                         useThis = helpMeAgain.getLethalityValue() + "";
-                        Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis + "C" + helpMeAgain.getLethalityC() + "G" + helpMeAgain.getLethalityG(), Toast.LENGTH_SHORT).show();
 
                         if(helpMeAgain.getPurchased() == false) {
+
+                            lethalityHelper = helpMeAgain.getPurchased();
+                            lethalityHelper = true;
+
                             lethality = lethality + helpMeAgain.getLethalityValue();
-                            helpMeAgain.setPurchased(true);
+                            helpMeAgain.setPurchased(lethalityHelper);
                         }
                     }
+
+                    realm.commitTransaction();
 
                     //Put right here (above) that along with the toast it changes something in the equations!
                     //Alos have the xml file show the networking, security and lethality values,
@@ -287,10 +330,21 @@ public class MainActivity extends AppCompatActivity {
 
                     String useThis = "";
 
+                    realm.beginTransaction();
+
                     if(helpMeAgain.getNetworkingValue() != 0)
                     {
                         useThis = helpMeAgain.getNetworkingValue() + "";
                         Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis, Toast.LENGTH_SHORT).show();
+
+                        if(helpMeAgain.getPurchased() == false) {
+
+                            networkingHelper = helpMeAgain.getPurchased();
+                            networkingHelper = true;
+
+                            networking = networking + helpMeAgain.getNetworkingValue();
+                            helpMeAgain.setPurchased(networkingHelper);
+                        }
 
                     }
                     else if(helpMeAgain.getSecurityValue() != 0)
@@ -298,13 +352,35 @@ public class MainActivity extends AppCompatActivity {
                         useThis = helpMeAgain.getSecurityValue() + "";
                         Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis, Toast.LENGTH_SHORT).show();
 
+                        if(helpMeAgain.getPurchased() == false) {
+
+                            securityHelper = helpMeAgain.getPurchased();
+                            securityHelper = true;
+
+                            security = security + helpMeAgain.getSecurityValue();
+                            helpMeAgain.setPurchased(securityHelper);
+                        }
+
+
                     }
                     else
                     {
                         useThis = helpMeAgain.getLethalityValue() + "";
                         Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis, Toast.LENGTH_SHORT).show();
 
+                        if(helpMeAgain.getPurchased() == false) {
+
+                            lethalityHelper = helpMeAgain.getPurchased();
+                            lethalityHelper = true;
+
+                            lethality = lethality + helpMeAgain.getLethalityValue();
+                            helpMeAgain.setPurchased(lethalityHelper);
+                        }
+
+
                     }
+
+                    realm.commitTransaction();
 
                 }
             });
@@ -398,6 +474,18 @@ public class MainActivity extends AppCompatActivity {
             equation_view.setText(" ");
             logarithmic_view.setText(" ");
 
+            final TextView networkingCoeff = (TextView) findViewById(R.id.NetworkingCoeff);
+            final TextView securityCoeff = (TextView) findViewById(R.id.SecurityCoeff);
+            final TextView lethalityCoeff = (TextView) findViewById(R.id.LethalityCoeff);
+            final TextView midPoint = (TextView) findViewById(R.id.TrueMid);
+
+            networkingCoeff.setText("Networking: " + networking);
+            securityCoeff.setText("Security: " + security);
+            lethalityCoeff.setText("Lethality: " + lethality);
+
+            trueMid = ((Math.log((100/(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
+
+            midPoint.setText("Mid Point: " + trueMid);
 
             Thread t = new Thread() {
                 @Override
@@ -413,11 +501,18 @@ public class MainActivity extends AppCompatActivity {
                                         time.update('s', time.getSec() + (3600 * 12));
                                         time_view.setText(time.toString());
                                         equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getDay()) - shuffle));
-                                        logarithmic_view.setText("" + (100 / (1 + Math.exp(networking * (time.getDay() - trueMid)))));
 
-                                        equationVal = 100 / (1 + Math.exp(networking * (time.getDay() - trueMid)));
+                                        logarithmic_view.setText("" + (carryCap / (1 + Math.exp((-(networking + lethality)) * (time.getDay() - trueMid)))));
 
-                                        Log.d("Hit It", "FUCK");
+                                        equationVal = (carryCap / (1 + Math.exp(-((networking + lethality)) * (time.getDay() - trueMid))));
+
+
+                                        //Get Rid of at Some Point
+                                        //trueMid = ((Math.log((100/1)-1))/(networking + lethality)) + 0;
+
+                                        Log.d("Equation Value", "" + equationVal);
+                                        Log.d("True Middle", "" + trueMid);
+
 
                                     }
                                 });
@@ -430,18 +525,32 @@ public class MainActivity extends AppCompatActivity {
 
             t.start();
 
+            midPoint.setText("Mid Point: " + trueMid);
+
+
         } else {
 
             final TextView time_view = (TextView) findViewById(R.id.time_view);
             final EditText equation_view = (EditText) findViewById(R.id.SecurityEdit);
             final EditText logarithmic_view = (EditText) findViewById(R.id.LogGrowthEdit);
 
+            final TextView networkingCoeff = (TextView) findViewById(R.id.NetworkingCoeff);
+            final TextView securityCoeff = (TextView) findViewById(R.id.SecurityCoeff);
+            final TextView lethalityCoeff = (TextView) findViewById(R.id.LethalityCoeff);
+            final TextView midPoint = (TextView) findViewById(R.id.TrueMid);
+
+
             suspended = false;
 
 
                     time_view.setText(time.toString());
                     equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getDay()) - shuffle));
-                    logarithmic_view.setText("" + (100 / (1 + Math.exp(networking * (time.getDay() - trueMid)))));
+                    logarithmic_view.setText("" + (carryCap / (1 + Math.exp((networking + lethality) * (time.getDay() - trueMid)))));
+
+                    networkingCoeff.setText("Networking: " + networking);
+                    securityCoeff.setText("Security: " + security);
+                    lethalityCoeff.setText("Lethality: " + lethality);
+                    midPoint.setText("Mid Point: " + trueMid);
 
             }
 
@@ -475,7 +584,6 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 
     // Make the Screens Back Button go to the Main Screen
     @Override
@@ -515,6 +623,62 @@ public class MainActivity extends AppCompatActivity {
 
         suspended = true;
     }
+
+    public void resetGame(View view) {
+
+        realmConfig = new RealmConfiguration.Builder(this).build();
+
+        realm = Realm.getInstance(realmConfig);
+
+        realm.beginTransaction();
+
+        realm.clear(Game.class);
+
+        realm.commitTransaction();
+
+        virusListView.clear();
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
+                this,
+                R.layout.customlay,
+                virusListView);
+
+
+        if (lv != null)
+            lv.setAdapter(arrayAdapter);
+
+
+    }
+
+    public void reCalcMid(View view)
+    {
+
+        final TextView midPoint = (TextView) findViewById(R.id.TrueMid);
+
+        trueMid = ((Math.log((carryCap/(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
+
+        equationVal = (carryCap / (1 + Math.exp(-((networking + lethality)) * (time.getDay() - trueMid))));
+
+        //                                                              Maybe change above to 0
+
+        midPoint.setText("Mid Point: " + trueMid);
+
+        double equationValCheck;
+
+        equationValCheck = (carryCap / (1 + Math.exp(-((networking + lethality)) * (0 - trueMid))));
+
+        Toast.makeText(MainActivity.this, "" + equationValCheck, Toast.LENGTH_SHORT).show();
+
+
+        //Log.d("Checker", equationVal + "");
+        //Log.d("Checker", "Here I Should Be");
+
+
+        //Instead of Calculating the midpoint with the equationVal it needs to be the number of equationVal at 0 with the networking + lethality of .025 and the trueMid of 3125
+
+    }
+
+
 
 
     /*Commented Out Comments*/
