@@ -36,7 +36,7 @@ public class networking_upgrade extends Fragment {
             public void onClick(View v) {
                 view.findViewById(R.id.programsButton).setVisibility(View.VISIBLE);
                 Button button= (Button) view.findViewById(R.id.popUpButton);
-                button.setTextColor(Color.parseColor("#FF00"));
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
                 view.findViewById(R.id.popUpButton).setClickable(false);
 
             }
@@ -45,9 +45,11 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 infectedPrograms[0] = true;
+                Button button= (Button) view.findViewById(R.id.programsButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
+                button.setClickable(false);
                 if (LAN[0]) {
                     view.findViewById(R.id.manButton).setVisibility(View.VISIBLE);
-                    view.findViewById(R.id.programsButton).setClickable(false);
                 }
             }
         });
@@ -55,9 +57,11 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 LAN[0] =true;
+                Button button= (Button) view.findViewById(R.id.lanButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
+                button.setClickable(false);
                 if(infectedPrograms[0]){
                     view.findViewById(R.id.manButton).setVisibility(View.VISIBLE);
-                    view.findViewById(R.id.lanButton).setClickable(false);
                 }
             }
         });
@@ -65,6 +69,8 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.lanButton).setVisibility(View.VISIBLE);
+                Button button= (Button) view.findViewById(R.id.usbButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
                 view.findViewById(R.id.usbButton).setClickable(false);
             }
         });
@@ -72,9 +78,11 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 MAN[0] =true;
+                Button button= (Button) view.findViewById(R.id.manButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
+                button.setClickable(false);
                 if(satellites[0] && mainframes[0] && cables[0]){
                     view.findViewById(R.id.cloudButton).setVisibility(View.VISIBLE);
-                    view.findViewById(R.id.manButton).setClickable(false);
                 }
             }
         });
@@ -82,16 +90,21 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.satelliteButton).setVisibility(View.VISIBLE);
+                Button button= (Button) view.findViewById(R.id.serversTCButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
                 view.findViewById(R.id.serversTCButton).setClickable(false);
+
             }
         });
         view.findViewById(R.id.satelliteButton).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 satellites[0] =true;
+                Button button= (Button) view.findViewById(R.id.satelliteButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
+                button.setClickable(false);
                 if(MAN[0] && mainframes[0] && cables[0]){
                     view.findViewById(R.id.cloudButton).setVisibility(View.VISIBLE);
-                    view.findViewById(R.id.satelliteButton).setClickable(false);
                 }
             }
         });
@@ -99,10 +112,11 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 mainframes[0] = true;
+                Button button= (Button) view.findViewById(R.id.mainframeButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
+                button.setClickable(false);
                 if (MAN[0] && satellites[0] && cables[0]) {
                     view.findViewById(R.id.cloudButton).setVisibility(View.VISIBLE);
-                    view.findViewById(R.id.mainframeButton).setClickable(false);
-                    view.findViewById(R.id.mainframeButton).getBackground();
                 }
             }
         });
@@ -110,6 +124,8 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.mainframeButton).setVisibility(View.VISIBLE);
+                Button button= (Button) view.findViewById(R.id.serversBuisnessButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
                 view.findViewById(R.id.serversBuisnessButton).setClickable(false);
             }
         });
@@ -118,9 +134,11 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 cables[0] = true;
+                Button button= (Button) view.findViewById(R.id.atlanticCablesButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
+                button.setClickable(false);
                 if (MAN[0] && satellites[0] && mainframes[0]) {
                     view.findViewById(R.id.cloudButton).setVisibility(View.VISIBLE);
-                    view.findViewById(R.id.atlanticCablesButton).setClickable(false);
                 }
             }
         });
@@ -128,6 +146,8 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.buisnessRoutersButton).setVisibility(View.VISIBLE);
+                Button button= (Button) view.findViewById(R.id.homeRoutersButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
                 view.findViewById(R.id.homeRoutersButton).setClickable(false);
             }
         });
@@ -135,9 +155,11 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 businessRouters[0] = true;
+                Button button= (Button) view.findViewById(R.id.buisnessRoutersButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
+                button.setClickable(false);
                 if (cellTowers[0]) {
                     view.findViewById(R.id.atlanticCablesButton).setVisibility(View.VISIBLE);
-                    view.findViewById(R.id.buisnessRoutersButton).setClickable(false);
                 }
             }
         });
@@ -145,9 +167,11 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 cellTowers[0] = true;
+                Button button= (Button) view.findViewById(R.id.cellTowersButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
+                button.setClickable(false);
                 if (businessRouters[0]) {
                     view.findViewById(R.id.atlanticCablesButton).setVisibility(View.VISIBLE);
-                    view.findViewById(R.id.cellTowersButton).setClickable(false);
                 }
             }
         });
@@ -155,7 +179,17 @@ public class networking_upgrade extends Fragment {
             @Override
             public void onClick(View v) {
                 view.findViewById(R.id.cellTowersButton).setVisibility(View.VISIBLE);
+                Button button= (Button) view.findViewById(R.id.internetProvidersButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
                 view.findViewById(R.id.internetProvidersButton).setClickable(false);
+            }
+        });
+        view.findViewById(R.id.cloudButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Button button= (Button) view.findViewById(R.id.cloudButton);
+                button.setTextColor(getContext().getResources().getColor(R.color.colorPrimary));
+                button.setClickable(false);
             }
         });
         /*if(savedInstanceState == null) {
