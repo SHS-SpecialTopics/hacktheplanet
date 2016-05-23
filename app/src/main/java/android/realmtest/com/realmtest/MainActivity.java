@@ -26,6 +26,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Random;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -67,22 +68,6 @@ public class MainActivity extends AppCompatActivity {
     double[] lethalityVals = {0.10, 0.15,0.20,0.35,0.40,0.45,0.50,0.10,0.15,0.20,0.25,0.30,0.40,0.45,0.50,100000000};
     double[] networkingVals = {0.025,0.025,0.025,0.025,0.050,0.050,0.050,0.050,0.100,0.100,0.125,0.125,0.200,0.200,0.450};
 
-
-
-
-
-
-    //Make a Lethality G and Lethality C that controls panic and carrying cap respectively
-
-
-
-
-
-    //Now make the number arrays for the above
-    //Remember that some of the security (scramblers) have different type of numbers for there values
-
-    //Used For Thread Below
-
     boolean suspended = false;
     myDate time = new myDate(0);
     double equationVal;
@@ -93,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
     int shuffle = 0;
     double networking = 0;
     double lethality = 0;
+    double lethalCarry = 0;
 
     double trueMid = 0;
 
@@ -157,8 +143,6 @@ public class MainActivity extends AppCompatActivity {
 
             virusList = game1.getVirusList();
 
-            //REMEMBER TO ACTUALLY SET THE VIRUSES TO HAVE THE CORRECT VALUE IN THE CORRECT VALUE-SET
-            //LIKE PUTTING LETHALITY VALUES IN THE setLethalityValue METHOD (LOOK!!!!)
 
             for(int i = 0; i < securityStrings.length; i++) {
                 Virus looper = new Virus();
@@ -175,7 +159,6 @@ public class MainActivity extends AppCompatActivity {
                 looper.setCategory("Lethality");
                 looper.setLethalityValue(lethalityVals[i]);
                 looper.setId(i);
-                virusList.add(looper);
 
                 if(i < 7){
                     looper.setLethalityC(true);
@@ -184,6 +167,8 @@ public class MainActivity extends AppCompatActivity {
                 if(i > 6){
                     looper.setLethalityG(true);
                 }
+
+                virusList.add(looper);
 
             }
 
@@ -264,28 +249,36 @@ public class MainActivity extends AppCompatActivity {
                     else
                     {
                         useThis = helpMeAgain.getLethalityValue() + "";
-                        Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis + "C" + helpMeAgain.getLethalityC() + "G" + helpMeAgain.getLethalityG(), Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis + " C- " + helpMeAgain.getLethalityC() + " G- " + helpMeAgain.getLethalityG(), Toast.LENGTH_SHORT).show();
 
                         if(helpMeAgain.getPurchased() == false) {
 
                             lethalityHelper = helpMeAgain.getPurchased();
                             lethalityHelper = true;
 
-                            lethality = lethality + helpMeAgain.getLethalityValue();
+                            if(helpMeAgain.getLethalityC()) {
+                                lethalCarry = lethalCarry + helpMeAgain.getLethalityValue() * 2;
+                            }
+                            else
+                            {
+                                panic = lethality;
+                                lethality = lethality + helpMeAgain.getLethalityValue();
+                            }
+
+
+
                             helpMeAgain.setPurchased(lethalityHelper);
+
+
+
                         }
                     }
 
                     realm.commitTransaction();
 
-                    //Put right here (above) that along with the toast it changes something in the equations!
-                    //Alos have the xml file show the networking, security and lethality values,
-
                     Realm realmer = Realm.getInstance(realmConfig);
 
                     realmer.beginTransaction();
-
-
 
 
                     realmer.commitTransaction();
@@ -366,14 +359,23 @@ public class MainActivity extends AppCompatActivity {
                     else
                     {
                         useThis = helpMeAgain.getLethalityValue() + "";
-                        Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(MainActivity.this, "" + helpMeAgain.getcategory() + " : " + useThis + " C- " + helpMeAgain.getLethalityC() + " G- " + helpMeAgain.getLethalityG(), Toast.LENGTH_SHORT).show();
 
                         if(helpMeAgain.getPurchased() == false) {
 
                             lethalityHelper = helpMeAgain.getPurchased();
                             lethalityHelper = true;
 
-                            lethality = lethality + helpMeAgain.getLethalityValue();
+                            if(helpMeAgain.getLethalityC()) {
+                                lethalCarry = lethalCarry + helpMeAgain.getLethalityValue() * 2;
+                            }
+                            else
+                            {
+                                lethality = lethality + helpMeAgain.getLethalityValue();
+                            }
+
+
+
                             helpMeAgain.setPurchased(lethalityHelper);
                         }
 
@@ -432,9 +434,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
-
-            //Taken From Previous Code Up Top to make List View that you can click on
-
             ArrayAdapter<String> arrayAdapter2 = new ArrayAdapter<String>(
                     this,
                     R.layout.customlay,
@@ -478,12 +477,22 @@ public class MainActivity extends AppCompatActivity {
             final TextView securityCoeff = (TextView) findViewById(R.id.SecurityCoeff);
             final TextView lethalityCoeff = (TextView) findViewById(R.id.LethalityCoeff);
             final TextView midPoint = (TextView) findViewById(R.id.TrueMid);
+            final TextView carryingCapacity = (TextView) findViewById(R.id.CarryingCap);
 
             networkingCoeff.setText("Networking: " + networking);
             securityCoeff.setText("Security: " + security);
             lethalityCoeff.setText("Lethality: " + lethality);
+            carryingCapacity.setText("CarryingCap: " + lethalCarry);
 
-            trueMid = ((Math.log((100/(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
+
+            //Make a random number generator dependent on lethality that starts the panic!!!
+
+            //if(lethality > .30)
+            //{
+                //Random Number Blah
+            //}
+
+            trueMid = ((Math.log(((carryCap * lethalCarry)/(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
 
             midPoint.setText("Mid Point: " + trueMid);
 
@@ -502,9 +511,9 @@ public class MainActivity extends AppCompatActivity {
                                         time_view.setText(time.toString());
                                         equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getDay()) - shuffle));
 
-                                        logarithmic_view.setText("" + (carryCap / (1 + Math.exp((-(networking + lethality)) * (time.getDay() - trueMid)))));
+                                        logarithmic_view.setText("" + ((carryCap * lethalCarry) / (1 + Math.exp((-(networking + lethality)) * (time.getDay() - trueMid)))));
 
-                                        equationVal = (carryCap / (1 + Math.exp(-((networking + lethality)) * (time.getDay() - trueMid))));
+                                        equationVal = ((carryCap * lethalCarry) / (1 + Math.exp(-((networking + lethality)) * (time.getDay() - trueMid))));
 
 
                                         //Get Rid of at Some Point
@@ -545,7 +554,7 @@ public class MainActivity extends AppCompatActivity {
 
                     time_view.setText(time.toString());
                     equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getDay()) - shuffle));
-                    logarithmic_view.setText("" + (carryCap / (1 + Math.exp((networking + lethality) * (time.getDay() - trueMid)))));
+                    logarithmic_view.setText("" + ((carryCap * lethalCarry) / (1 + Math.exp((networking + lethality) * (time.getDay() - trueMid)))));
 
                     networkingCoeff.setText("Networking: " + networking);
                     securityCoeff.setText("Security: " + security);
@@ -647,6 +656,8 @@ public class MainActivity extends AppCompatActivity {
         if (lv != null)
             lv.setAdapter(arrayAdapter);
 
+        Toast.makeText(MainActivity.this, "Reseted", Toast.LENGTH_SHORT).show();
+
 
     }
 
@@ -655,9 +666,9 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView midPoint = (TextView) findViewById(R.id.TrueMid);
 
-        trueMid = ((Math.log((carryCap/(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
+        trueMid = ((Math.log(((carryCap * lethalCarry) /(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
 
-        equationVal = (carryCap / (1 + Math.exp(-((networking + lethality)) * (time.getDay() - trueMid))));
+        equationVal = ((carryCap * lethalCarry)/ (1 + Math.exp(-((networking + lethality)) * (time.getDay() - trueMid))));
 
         //                                                              Maybe change above to 0
 
@@ -665,7 +676,7 @@ public class MainActivity extends AppCompatActivity {
 
         double equationValCheck;
 
-        equationValCheck = (carryCap / (1 + Math.exp(-((networking + lethality)) * (0 - trueMid))));
+        equationValCheck = ((carryCap * lethalCarry) / (1 + Math.exp(-((networking + lethality)) * (0 - trueMid))));
 
         Toast.makeText(MainActivity.this, "" + equationValCheck, Toast.LENGTH_SHORT).show();
 
@@ -742,5 +753,17 @@ public class MainActivity extends AppCompatActivity {
 //
 //        //End of Realm */
 //
+//        Make a Lethality G and Lethality C that controls panic and carrying cap respectively
+//        Now make the number arrays for the above
+//        Remember that some of the security (scramblers) have different type of numbers for there values
+//        Used For Thread Below
+//
+//        REMEMBER TO ACTUALLY SET THE VIRUSES TO HAVE THE CORRECT VALUE IN THE CORRECT VALUE-SET
+//        LIKE PUTTING LETHALITY VALUES IN THE setLethalityValue METHOD (LOOK!!!!)
+//
+//        Put right here (above) that along with the toast it changes something in the equations!
+//        Also have the xml file show the networking, security and lethality values,
+//
+
 }
 

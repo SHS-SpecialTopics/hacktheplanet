@@ -36,7 +36,7 @@
 
     <Button
         android:layout_width="150dp"
-        android:layout_height="75dp"
+        android:layout_height="70dp"
         android:text="Recalculate Midpoint"
         android:layout_gravity="right"
         android:onClick="reCalcMid"/>
@@ -46,7 +46,7 @@
         android:layout_height="wrap_content"
         android:text="Networking:"
         android:id="@+id/NetworkingCoeff"
-        android:textSize="40sp"
+        android:textSize="35sp"
         android:layout_marginBottom="10dp"/>
 
     <TextView
@@ -54,22 +54,29 @@
         android:layout_height="wrap_content"
         android:text="Lethality:"
         android:id="@+id/LethalityCoeff"
-        android:textSize="40sp"
-        android:layout_marginBottom="10dp"/>
+        android:textSize="35sp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Equation:"
+        android:text="Security:"
         android:id="@+id/SecurityCoeff"
-        android:textSize="40sp"/>
+        android:textSize="35sp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TrueMid:"
         android:id="@+id/TrueMid"
-        android:textSize="40sp"/>
+        android:textSize="35sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CarryingCap:"
+        android:id="@+id/CarryingCap"
+        android:textSize="35sp"/>
 
     <TextView
         android:id="@+id/time_view"
@@ -79,7 +86,7 @@
         android:textColor="#FFFFFF"
         android:text="Time"
         android:textSize="30sp"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:layout_marginLeft="10dp"/>
 
