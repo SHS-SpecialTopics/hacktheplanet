@@ -4,7 +4,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -100,6 +102,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
         realmConfig = new RealmConfiguration.Builder(this).build();
 
         realm = Realm.getInstance(realmConfig);
@@ -114,7 +118,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        View decorView = getWindow().getDecorView(); // Hide the status bar.
+        int uiOptions = View.SYSTEM_UI_FLAG_FULLSCREEN;
+        decorView.setSystemUiVisibility(uiOptions);
+        // Remember that you should never show the action bar if the
+        // status bar is hidden, so hide that too if necessary.
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
     }
+
 
 
     public void openGameOne(View view){
@@ -492,6 +507,8 @@ public class MainActivity extends AppCompatActivity {
                 //Random Number Blah
             //}
 
+            // IF IT GOES OVER A YEAR USING TIME WILL BE WRONG!!!!!
+
             trueMid = ((Math.log(((carryCap * lethalCarry)/(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
 
             midPoint.setText("Mid Point: " + trueMid);
@@ -502,18 +519,19 @@ public class MainActivity extends AppCompatActivity {
                     try {
                         while (!isInterrupted()) {
                             while (!suspended) {
-                                Thread.sleep(500);
+                                Thread.sleep(250);
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
 
-                                        time.update('s', time.getSec() + (3600 * 12));
+                                        time.update(/*'s', time.getSec() + (3600 * 12)*/);
+
                                         time_view.setText(time.toString());
-                                        equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getDay()) - shuffle));
+                                        equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getTime()) - shuffle));
 
-                                        logarithmic_view.setText("" + ((carryCap * lethalCarry) / (1 + Math.exp((-(networking + lethality)) * (time.getDay() - trueMid)))));
+                                        logarithmic_view.setText("" + ((carryCap * lethalCarry) / (1 + Math.exp((-(networking + lethality)) * (time.getTime() - trueMid)))));
 
-                                        equationVal = ((carryCap * lethalCarry) / (1 + Math.exp(-((networking + lethality)) * (time.getDay() - trueMid))));
+                                        equationVal = ((carryCap * lethalCarry) / (1 + Math.exp(-((networking + lethality)) * (time.getTime() - trueMid))));
 
 
                                         //Get Rid of at Some Point
@@ -521,7 +539,20 @@ public class MainActivity extends AppCompatActivity {
 
                                         Log.d("Equation Value", "" + equationVal);
                                         Log.d("True Middle", "" + trueMid);
+                                        Log.d("Seconds", "" + time.getTime());
 
+                                        int randomness;
+
+                                        if(lethality >= .30){
+                                            randomness  = (int) (Math.random() * 1000);
+
+                                            //Randomness here
+                                            if (randomness > 980){
+
+                                                Toast.makeText(MainActivity.this, "" + randomness + " It Is Spreading", Toast.LENGTH_SHORT).show();
+
+                                            }
+                                        }
 
                                     }
                                 });
@@ -553,8 +584,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                     time_view.setText(time.toString());
-                    equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getDay()) - shuffle));
-                    logarithmic_view.setText("" + ((carryCap * lethalCarry) / (1 + Math.exp((networking + lethality) * (time.getDay() - trueMid)))));
+                    equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getTime()) - shuffle));
+                    logarithmic_view.setText("" + ((carryCap * lethalCarry) / (1 + Math.exp((networking + lethality) * (time.getTime() - trueMid)))));
 
                     networkingCoeff.setText("Networking: " + networking);
                     securityCoeff.setText("Security: " + security);
@@ -575,6 +606,7 @@ public class MainActivity extends AppCompatActivity {
         // Inflate the menu; this adds items to the action bar if it is present.
 
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
 
         return true;
     }
@@ -668,7 +700,7 @@ public class MainActivity extends AppCompatActivity {
 
         trueMid = ((Math.log(((carryCap * lethalCarry) /(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
 
-        equationVal = ((carryCap * lethalCarry)/ (1 + Math.exp(-((networking + lethality)) * (time.getDay() - trueMid))));
+        equationVal = ((carryCap * lethalCarry)/ (1 + Math.exp(-((networking + lethality)) * (time.getTime() - trueMid))));
 
         //                                                              Maybe change above to 0
 
