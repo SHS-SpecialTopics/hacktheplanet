@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="ff_green">#2ab00b</color>
+    <color name="speed_grey">#909090</color>
+    <color name="country_red">#FFFF0000</color>
+    <color name="black">#000000</color>
+    <color name="clear">#00000000</color>
+
+    <color name="exp_1">#ffc203</color>
+    <color name="exp_2">#ed8b03</color>
+    <color name="exp_3">#ff5c03</color>
+    <color name="exp_4">#ff3b0a</color>
+
+    <color name="popgrey">#333b40</color>
+    <color name="pop_red">#f22e2e</color>
+
+    <color name="mapBlue">#31cbf9</color>
+    <color name="cureBlue1">#2cb6e0</color>
+    <color name="cureBlue2">#27a2c7</color>
+    <color name="cureBlue3">#228eae</color>
+    <color name="cureBlue4">#1d7995</color>
+    <color name="cureBlue5">#18657c</color>
+    <color name="cureBlue6">#135163</color>
+    <color name="cureBlue7">#0e3c4a</color>
+    <color name="cureBlue8">#092831</color>
+    <color name="cureBlue9">#041418</color>
+
+
+    <color name="virusGreen">#34e70b</color>
+    <color name="pbgreen1">#2ecf09</color>
+    <color name="pbgreen2">#29b808</color>
+    <color name="pbgreen3">#24a107</color>
+    <color name="pbgreen4">#1f8a06</color>
+    <color name="pbgreen5">#1a7305</color>
+    <color name="pbgreen6">#145c04</color>
+    <color name="pbgreen7">#0f4503</color>
+    <color name="pbgreen8">#0a2e02</color>
+    <color name="pbgreen9">#051701</color>
+</resources>
