@@ -8,7 +8,6 @@
         android:layout_width="400dp"
         android:layout_height="400dp"
         android:id="@+id/fakeMapView"
-        android:src="@drawable/fakemap2"
         android:scaleType="centerInside"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"

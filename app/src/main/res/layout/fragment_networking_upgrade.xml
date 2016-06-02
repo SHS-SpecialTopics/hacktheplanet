@@ -1,10 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="horizontal"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context="roy.tablayoutwithviewpager.GameFragment"
     android:background="@drawable/border">
+
     <LinearLayout android:layout_width="@dimen/networking_width"
         android:layout_height="fill_parent"
         android:weightSum="3"
@@ -27,7 +28,7 @@
             android:textSize="@dimen/networking_text_size"
             android:id="@+id/manButton"
             android:background="@drawable/optimised"
-            android:visibility="invisible"/>
+            android:visibility="visible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight=".2"
@@ -41,7 +42,7 @@
             android:textSize="@dimen/networking_text_size"
             android:id="@+id/atlanticCablesButton"
             android:background="@drawable/optimised"
-            android:visibility="invisible"/>
+            android:visibility="visible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight=".4"
@@ -68,8 +69,8 @@
             android:textSize="@dimen/networking_text_size"
             android:text="Satellite"
             android:id="@+id/satelliteButton"
-            android:background="@drawable/optimised"
-            android:visibility="invisible"/>
+            android:background="@drawable/satellite"
+            android:visibility="visible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight="1"
@@ -93,7 +94,7 @@
             android:textSize="@dimen/networking_text_size"
             android:id="@+id/programsButton"
             android:background="@drawable/optimised"
-            android:visibility="invisible"/>
+            android:visibility="visible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight="1"
@@ -107,7 +108,7 @@
             android:textSize="@dimen/networking_text_size"
             android:id="@+id/buisnessRoutersButton"
             android:background="@drawable/optimised"
-            android:visibility="invisible"/>
+            android:visibility="visible"/>
     </LinearLayout>
     <LinearLayout android:layout_width="@dimen/networking_width"
         android:layout_height="fill_parent"
@@ -151,7 +152,7 @@
         android:text="Pop_Up \nAds"
         android:textSize="@dimen/networking_text_size"
         android:id="@+id/popUpButton"
-        android:background="@drawable/optimised"/>
+        android:background="@drawable/pop_up"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_weight="1"
@@ -164,7 +165,7 @@
         android:text="Home \nRouters"
         android:textSize="@dimen/networking_text_size"
         android:id="@+id/homeRoutersButton"
-        android:background="@drawable/optimised" />
+        android:background="@drawable/router" />
     </LinearLayout>
     <LinearLayout android:layout_width="@dimen/networking_width"
         android:layout_height="fill_parent"
@@ -186,8 +187,8 @@
         android:textSize="@dimen/networking_text_size"
         android:text="Cloud"
         android:id="@+id/cloudButton"
-        android:background="@drawable/optimised"
-        android:visibility="invisible"/>
+        android:background="@drawable/cloud"
+        android:visibility="visible"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_weight="1"
@@ -210,7 +211,7 @@
             android:textSize="@dimen/networking_text_size"
             android:id="@+id/lanButton"
             android:background="@drawable/optimised"
-            android:visibility="invisible"/>
+            android:visibility="visible"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight="1"
@@ -223,8 +224,8 @@
             android:text="Cell\nTowers"
             android:textSize="@dimen/networking_text_size"
             android:id="@+id/cellTowersButton"
-            android:background="@drawable/optimised"
-            android:visibility="invisible"/>
+            android:background="@drawable/cell_tower"
+            android:visibility="visible"/>
     </LinearLayout>
     <LinearLayout android:layout_width="@dimen/networking_width"
         android:layout_height="fill_parent"
@@ -247,7 +248,7 @@
             android:textSize="@dimen/networking_text_size"
             android:id="@+id/mainframeButton"
             android:background="@drawable/optimised"
-            android:visibility="invisible"/>
+            android:visibility="visible"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_weight="1"
@@ -269,7 +270,7 @@
             android:text="USB\nConnections"
             android:textSize="@dimen/networking_text_size"
             android:id="@+id/usbButton"
-            android:background="@drawable/optimised"/>
+            android:background="@drawable/usb"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_weight="1"
@@ -304,7 +305,7 @@
             android:text="Servers \n(Buisness)"
             android:textSize="@dimen/networking_text_size"
             android:id="@+id/serversBuisnessButton"
-            android:background="@drawable/optimised"
+            android:background="@drawable/server"
             android:visibility="visible"/>
         <TextView
             android:layout_width="wrap_content"

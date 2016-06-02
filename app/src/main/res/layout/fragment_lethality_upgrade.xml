@@ -31,11 +31,11 @@
                 android:layout_weight="1"
                 android:layout_height="0dp"
                 android:text="Desktop"
-                android:background="@drawable/optimised"
+                android:background="@drawable/desktop"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
                 android:id="@+id/DesktopButton"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
 
             <Button
                 android:layout_width="fill_parent"
@@ -43,10 +43,10 @@
                 android:layout_height="0dp"
                 android:text="Work \nStations"
                 android:textSize="@dimen/text_size"
-                android:background="@drawable/optimised"
+                android:background="@drawable/workstation"
                 android:textColor="@color/black"
                 android:id="@+id/StationsButton"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -67,7 +67,7 @@
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/black"
                 android:id="@+id/LaptopButton"
-                android:background="@drawable/optimised"
+                android:background="@drawable/laptop"
                 android:visibility="visible"/>
             <Button
                 android:layout_width="fill_parent"
@@ -78,7 +78,7 @@
                 android:id="@+id/UCCButton"
                 android:textSize="@dimen/text_size"
                 android:background="@drawable/optimised"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
             <Button
                 android:layout_width="fill_parent"
                 android:layout_weight="1"
@@ -86,9 +86,9 @@
                 android:text="Mobile \nPhones"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size"
-                android:background="@drawable/optimised"
+                android:background="@drawable/flip_phone"
                 android:id="@+id/MobilePhonesButton"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="@dimen/layout_width"
@@ -109,19 +109,19 @@
                 android:text="Tablets"
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/black"
-                android:background="@drawable/optimised"
+                android:background="@drawable/tablet"
                 android:id="@+id/TablesButton"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
             <Button
                 android:layout_width="fill_parent"
                 android:layout_weight="1"
                 android:layout_height="0dp"
                 android:text="Smart \nPhones"
                 android:textSize="@dimen/text_size"
-                android:background="@drawable/optimised"
+                android:background="@drawable/smart_phone"
                 android:textColor="@color/black"
                 android:id="@+id/SmartPhonesButton"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -158,7 +158,7 @@
                 android:id="@+id/RovButton"
                 android:textColor="@color/black"
                 android:background="@drawable/optimised"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
             <Button
                 android:layout_width="fill_parent"
                 android:layout_weight="1"
@@ -167,8 +167,8 @@
                 android:textSize="@dimen/text_size"
                 android:id="@+id/WarsuitsButton"
                 android:textColor="@color/black"
-                android:background="@drawable/optimised"
-                android:visibility="invisible"/>
+                android:background="@drawable/war_machine"
+                android:visibility="visible"/>
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"
@@ -190,7 +190,7 @@
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/black"
                 android:id="@+id/GovernmentSatellitesButton"
-                android:background="@drawable/optimised"
+                android:background="@drawable/govt_satellites"
                 android:visibility="visible"/>
             <View
                 android:layout_width="fill_parent"
@@ -205,7 +205,7 @@
                 android:textColor="@color/black"
                 android:id="@+id/DronesButton"
                 android:background="@drawable/optimised"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
         </LinearLayout>
 
         <LinearLayout
@@ -229,7 +229,7 @@
                 android:textColor="@color/black"
                 android:id="@+id/LaunchCodesButton"
                 android:background="@drawable/optimised"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
             <View
                 android:layout_width="fill_parent"
                 android:layout_weight="1"
@@ -252,7 +252,7 @@
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/black"
                 android:id="@+id/WifiScrammbleButton"
-                android:background="@drawable/optimised"
+                android:background="@drawable/wifi_scrambler"
                 android:visibility="visible"/>
             <View
                 android:layout_width="fill_parent"
@@ -267,7 +267,7 @@
                 android:textColor="@color/black"
                 android:id="@+id/Mainframe1Button"
                 android:background="@drawable/optimised"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
 
         </LinearLayout>
 
@@ -293,7 +293,7 @@
                 android:textColor="@color/black"
                 android:background="@drawable/optimised"
                 android:id="@+id/RandomRebootsButton"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
             <Button
                 android:layout_width="fill_parent"
                 android:layout_weight="1"
@@ -303,7 +303,7 @@
                 android:background="@drawable/optimised"
                 android:textColor="@color/black"
                 android:id="@+id/ServersButton"
-                android:visibility="invisible"/>
+                android:visibility="visible"/>
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"

@@ -1,6 +1,10 @@
 package com.example.rayqu.timertest;
 
 
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Picture;
+import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -176,6 +180,7 @@ public class lethality_upgrade extends Fragment {
                 }
             }
         });
+
         /*if(savedInstanceState == null) {
             view.findViewById(R.id.DesktopButton).setVisibility(View.INVISIBLE);
             view.findViewById(R.id.StationsButton).setVisibility(View.INVISIBLE);
