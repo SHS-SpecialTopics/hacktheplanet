@@ -16,7 +16,7 @@
         android:id="@+id/LogGrowthEdit"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text="Insert Shit Here"
+        android:text="Insert Here"
         android:textSize="30sp"/>
 
     <TextView
@@ -30,16 +30,16 @@
         android:id="@+id/SecurityEdit"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text="Insert Shit Here"
+        android:text="Insert Here"
         android:textSize="30sp"/>
 
 
-    <Button
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:text="Recalculate Midpoint"
-        android:layout_gravity="right"
-        android:onClick="reCalcMid"/>
+    <!--<Button-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:text="Recalculate Midpoint"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:onClick="reCalcMid"/>-->
 
     <TextView
         android:layout_width="wrap_content"
@@ -47,7 +47,9 @@
         android:text="Networking:"
         android:id="@+id/NetworkingCoeff"
         android:textSize="35sp"
-        android:layout_marginBottom="10dp"/>
+        android:layout_marginTop="25dp"/>
+    <!--android:layout_marginBottom="10dp"-->
+
 
     <TextView
         android:layout_width="wrap_content"
@@ -86,7 +88,7 @@
         android:textColor="#FFFFFF"
         android:text="Time"
         android:textSize="30sp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:layout_marginLeft="10dp"/>
 

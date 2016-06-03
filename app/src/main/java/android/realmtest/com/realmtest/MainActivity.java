@@ -13,6 +13,8 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
@@ -73,9 +75,10 @@ public class MainActivity extends AppCompatActivity {
     boolean suspended = false;
     myDate time = new myDate(0);
     double equationVal;
+    double AntiVirus;
 
     double security = 0;
-    double panic = 1;
+    double panic = 0;
     //Need panic to change according to??
     int shuffle = 0;
     double networking = 0;
@@ -97,6 +100,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
+
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -129,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
         actionBar.hide();
 
     }
-
 
 
     public void openGameOne(View view){
@@ -494,20 +501,13 @@ public class MainActivity extends AppCompatActivity {
             final TextView midPoint = (TextView) findViewById(R.id.TrueMid);
             final TextView carryingCapacity = (TextView) findViewById(R.id.CarryingCap);
 
+
             networkingCoeff.setText("Networking: " + networking);
             securityCoeff.setText("Security: " + security);
             lethalityCoeff.setText("Lethality: " + lethality);
             carryingCapacity.setText("CarryingCap: " + lethalCarry);
 
 
-            //Make a random number generator dependent on lethality that starts the panic!!!
-
-            //if(lethality > .30)
-            //{
-                //Random Number Blah
-            //}
-
-            // IF IT GOES OVER A YEAR USING TIME WILL BE WRONG!!!!!
 
             trueMid = ((Math.log(((carryCap * lethalCarry)/(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
 
@@ -520,6 +520,7 @@ public class MainActivity extends AppCompatActivity {
                         while (!isInterrupted()) {
                             while (!suspended) {
                                 Thread.sleep(250);
+
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
@@ -527,7 +528,7 @@ public class MainActivity extends AppCompatActivity {
                                         time.update(/*'s', time.getSec() + (3600 * 12)*/);
 
                                         time_view.setText(time.toString());
-                                        equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getTime()) - shuffle));
+
 
                                         logarithmic_view.setText("" + ((carryCap * lethalCarry) / (1 + Math.exp((-(networking + lethality)) * (time.getTime() - trueMid)))));
 
@@ -537,25 +538,54 @@ public class MainActivity extends AppCompatActivity {
                                         //Get Rid of at Some Point
                                         //trueMid = ((Math.log((100/1)-1))/(networking + lethality)) + 0;
 
-                                        Log.d("Equation Value", "" + equationVal);
-                                        Log.d("True Middle", "" + trueMid);
-                                        Log.d("Seconds", "" + time.getTime());
+//                                        Log.d("Equation Value", "" + equationVal);
+//                                        Log.d("True Middle", "" + trueMid);
+//                                        Log.d("Seconds", "" + time.getTime());
 
                                         int randomness;
 
                                         if(lethality >= .30){
+
                                             randomness  = (int) (Math.random() * 1000);
 
                                             //Randomness here
-                                            if (randomness > 980){
+                                            if (randomness > 995){
 
-                                                Toast.makeText(MainActivity.this, "" + randomness + " It Is Spreading", Toast.LENGTH_SHORT).show();
+                                                Toast.makeText(MainActivity.this, "" + randomness + " It Is Spreading: " + lethality , Toast.LENGTH_SHORT).show();
+
+                                            }
+                                        }
+
+                                        int randomness2;
+
+
+                                        if (AntiVirus <= 100)
+                                        {
+
+                                            equation_view.setText("Antivirus Progress = (1 - Security) * (Panic)(Time) - Shuffle = " + " 100 - " + (((1 + security) * (panic / 4) * time.getTime()) - shuffle));
+                                            AntiVirus = (((1 + security) * (panic / 4) * time.getTime()) - shuffle);
+
+                                            if(lethalCarry >= .35)
+                                            {
+
+                                                randomness2 = (int) (Math.random() * 10000);
+
+                                                Log.d("Panic", "" + panic);
+
+                                                if (randomness2 > 9800)
+                                                {
+
+                                                    panic = panic + (lethalCarry/2);
+
+                                                    Toast.makeText(MainActivity.this, "It Okay Don't Panic It Is Only: " + panic, Toast.LENGTH_SHORT).show();
+                                                }
 
                                             }
                                         }
 
                                     }
                                 });
+
                             }
                         }
                     } catch (InterruptedException e) {
@@ -584,7 +614,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                     time_view.setText(time.toString());
-                    equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getTime()) - shuffle));
+                    equation_view.setText("Antivirus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + (((1 + security) * (panic / 4) * time.getTime()) - shuffle));
                     logarithmic_view.setText("" + ((carryCap * lethalCarry) / (1 + Math.exp((networking + lethality) * (time.getTime() - trueMid)))));
 
                     networkingCoeff.setText("Networking: " + networking);
@@ -693,33 +723,33 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void reCalcMid(View view)
-    {
-
-        final TextView midPoint = (TextView) findViewById(R.id.TrueMid);
-
-        trueMid = ((Math.log(((carryCap * lethalCarry) /(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
-
-        equationVal = ((carryCap * lethalCarry)/ (1 + Math.exp(-((networking + lethality)) * (time.getTime() - trueMid))));
-
-        //                                                              Maybe change above to 0
-
-        midPoint.setText("Mid Point: " + trueMid);
-
-        double equationValCheck;
-
-        equationValCheck = ((carryCap * lethalCarry) / (1 + Math.exp(-((networking + lethality)) * (0 - trueMid))));
-
-        Toast.makeText(MainActivity.this, "" + equationValCheck, Toast.LENGTH_SHORT).show();
-
-
-        //Log.d("Checker", equationVal + "");
-        //Log.d("Checker", "Here I Should Be");
-
-
-        //Instead of Calculating the midpoint with the equationVal it needs to be the number of equationVal at 0 with the networking + lethality of .025 and the trueMid of 3125
-
-    }
+//    public void reCalcMid(View view)
+//    {
+//
+//        final TextView midPoint = (TextView) findViewById(R.id.TrueMid);
+//
+//        trueMid = ((Math.log(((carryCap * lethalCarry) /(1.17691094*10e-32))-1))/(networking + lethality)) + 0;
+//
+//        equationVal = ((carryCap * lethalCarry)/ (1 + Math.exp(-((networking + lethality)) * (time.getTime() - trueMid))));
+//
+//        //                                                              Maybe change above to 0
+//
+//        midPoint.setText("Mid Point: " + trueMid);
+//
+//        double equationValCheck;
+//
+//        equationValCheck = ((carryCap * lethalCarry) / (1 + Math.exp(-((networking + lethality)) * (0 - trueMid))));
+//
+//        Toast.makeText(MainActivity.this, "" + equationValCheck, Toast.LENGTH_SHORT).show();
+//
+//
+//        //Log.d("Checker", equationVal + "");
+//        //Log.d("Checker", "Here I Should Be");
+//
+//
+//        //Instead of Calculating the midpoint with the equationVal it needs to be the number of equationVal at 0 with the networking + lethality of .025 and the trueMid of 3125
+//
+//    }
 
 
 
@@ -797,5 +827,14 @@ public class MainActivity extends AppCompatActivity {
 //        Also have the xml file show the networking, security and lethality values,
 //
 
+    //Make a random number generator dependent on lethality that starts the panic!!!
+
+    //if(lethality > .30)
+    //{
+    //Random Number Blah
+    //}
+
+    // IF IT GOES OVER A YEAR USING TIME WILL BE WRONG!!!!!
+    //setContentView(R.layout.main);
 }
 
