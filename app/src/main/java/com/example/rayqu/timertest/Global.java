@@ -16,18 +16,18 @@ public  class  Global extends Application {
         this.openedYet = openNow;
     }
 
-    private BooleanActions yanksOut = new BooleanActions(this);
-
-    private BooleanOutline yanksIn = new BooleanOutline();
-
-
-    public BooleanActions getYanksOut() {return yanksOut;}
-
-    public BooleanOutline getYanksIn() {return yanksIn;}
-
-    public void setYanksOut(BooleanActions input) {yanksOut = input;}
-
-    public void setYanksIn(BooleanOutline input) { yanksIn = input;}
+//    private BooleanActions yanksOut = new BooleanActions(this);
+//
+//    private BooleanOutline yanksIn = new BooleanOutline();
+//
+//
+//    public BooleanActions getYanksOut() {return yanksOut;}
+//
+//    public BooleanOutline getYanksIn() {return yanksIn;}
+//
+//    public void setYanksOut(BooleanActions input) {yanksOut = input;}
+//
+//    public void setYanksIn(BooleanOutline input) { yanksIn = input;}
 
 
 
