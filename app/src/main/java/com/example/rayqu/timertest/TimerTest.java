@@ -166,7 +166,7 @@ import java.util.List;
                              runOnUiThread(new Runnable() {
                                  @Override
                                  public void run() {
-                                     time.update('s', time.getSec() + (3600 * 12));
+                                     time.update();
                                      time_view.setText(time.toString());
                                      equation_view.setText("Anti-Virus Progress = (Security) * (Panic)(Time) - Shuffle = " + " " + ((security * (panic / 4) * time.getDay()) - shuffle));
                                      logarithmic_view.setText("This is what the logartithimic will look like for Asia:\n" + (100 / (1 + Math.exp(networking * (time.getDay() - trueMid)))));
