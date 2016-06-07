@@ -1,4 +1,4 @@
-//package com.example.rayqu.timertest;
+//package com.mikescompany.hacktheplanet.timertest;
 //
 //import android.content.ContentValues;
 //import android.content.Context;

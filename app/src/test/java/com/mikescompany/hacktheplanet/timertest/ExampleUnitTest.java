@@ -1,4 +1,4 @@
-package com.example.rayqu.timertest;
+package com.mikescompany.hacktheplanet.timertest;
 
 import org.junit.Test;
 

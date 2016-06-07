@@ -1,15 +1,12 @@
-package com.example.rayqu.timertest;
+package com.mikescompany.hacktheplanet;
 
-import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.Button;
-import android.widget.LinearLayout;
+
+import com.mikescompany.hacktheplanet.R;
 
 /**
  * Created by Owner on 2/17/2016.
