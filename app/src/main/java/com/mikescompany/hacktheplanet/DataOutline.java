@@ -1,4 +1,4 @@
-//package com.example.rayqu.timertest;
+//package com.mikescompany.hacktheplanet.timertest;
 //
 ///** Created by rayqu on 1/8/2016. */
 //

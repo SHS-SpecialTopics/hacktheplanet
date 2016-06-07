@@ -22,6 +22,7 @@ import com.mikescompany.hacktheplanet.R;
 import com.google.android.gms.appindexing.Action;
 import com.google.android.gms.appindexing.AppIndex;
 import com.google.android.gms.common.api.GoogleApiClient;
+import com.mikescompany.hacktheplanet.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -241,7 +242,7 @@ import java.util.List;
                  // Otherwise, set the URL to null.
                  Uri.parse("http://host/path"),
                  // TODO: Make sure this auto-generated app deep link URI is correct.
-                 Uri.parse("android-app://com.example.rayqu.timertest/http/host/path")
+                 Uri.parse("android-app://com.mikescompany.hacktheplanet.timertest/http/host/path")
          );
          AppIndex.AppIndexApi.start(client, viewAction);
      }
@@ -260,7 +261,7 @@ import java.util.List;
                  // Otherwise, set the URL to null.
                  Uri.parse("http://host/path"),
                  // TODO: Make sure this auto-generated app deep link URI is correct.
-                 Uri.parse("android-app://com.example.rayqu.timertest/http/host/path")
+                 Uri.parse("android-app://com.mikescompany.hacktheplanet.timertest/http/host/path")
          );
          AppIndex.AppIndexApi.end(client, viewAction);
          client.disconnect();

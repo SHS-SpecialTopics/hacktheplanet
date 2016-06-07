@@ -5,7 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+<<<<<<< HEAD
     tools:context="com.mikescompany.hacktheplanet.TimerTest">
+=======
+    tools:context="com.mikescompany.hacktheplanet.timertest.TimerTest">
+>>>>>>> 5032c6759a608a490453723837dfcf059607fc76
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"

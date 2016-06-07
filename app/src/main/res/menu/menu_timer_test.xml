@@ -1,7 +1,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+<<<<<<< HEAD
     tools:context="com.mikescompany.hacktheplanet.TimerTest">
+=======
+    tools:context="com.mikescompany.hacktheplanet.timertest.TimerTest">
+>>>>>>> 5032c6759a608a490453723837dfcf059607fc76
     <item
         android:id="@+id/action_settings"
         android:orderInCategory="100"
