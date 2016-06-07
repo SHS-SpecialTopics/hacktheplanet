@@ -1,4 +1,4 @@
-package com.example.rayqu.timertest;
+package com.mikescompany.hacktheplanet;
 
 /**
  * Created by Owner on 3/4/2016.

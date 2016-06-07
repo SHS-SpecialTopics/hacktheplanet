@@ -1,4 +1,4 @@
-package com.example.rayqu.timertest;
+package com.mikescompany.hacktheplanet.timertest;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
