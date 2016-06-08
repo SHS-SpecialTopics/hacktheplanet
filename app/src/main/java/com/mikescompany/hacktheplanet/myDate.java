@@ -1,4 +1,4 @@
-package android.realmtest.com.realmtest;
+package com.mikescompany.hacktheplanet;
 
 /**
  * Created by rayqu on 2/3/2016.

@@ -1,9 +1,6 @@
-package android.realmtest.com.realmtest;
+package com.mikescompany.hacktheplanet;
 
 import io.realm.RealmObject;
-import io.realm.RealmList;
-import io.realm.RealmObject;
-import io.realm.annotations.Ignore;
 
 
 public class Virus extends RealmObject{

@@ -1,13 +1,10 @@
-package android.realmtest.com.realmtest;
+package com.mikescompany.hacktheplanet;
 
-import android.app.Application;
 import android.os.Bundle;
+import com.mikescompany.hacktheplanet.R;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import java.util.logging.Handler;
 
 /**
  * Created by rayqu on 4/19/2016.

@@ -1,8 +1,7 @@
-package android.realmtest.com.realmtest;
+package com.mikescompany.hacktheplanet;
 
 import java.util.ArrayList;
 
-import io.realm.Realm;
 import io.realm.RealmList;
 import io.realm.RealmObject;
 
@@ -13,13 +12,13 @@ public class Game extends RealmObject {
     private RealmList<Virus> virusList;
     private long id;
 
-
-    private ArrayList<Double> regionPercent;
-    private ArrayList<Boolean> regionPoints;
-
     private double curePercent;
     private long time;
     private int notSpentPoints;
+
+    //For Mike's Regions
+    private RealmList<Region> regionList;
+    //
 
 
     public RealmList<Virus> getVirusList() {
@@ -63,22 +62,6 @@ public class Game extends RealmObject {
         this.notSpentPoints = notSpentPoints;
     }
 
-    public ArrayList<Boolean> getRegionPoints() {
-        return regionPoints;
-    }
-
-    public void setRegionPoints(ArrayList<Boolean> regionPoints) {
-        this.regionPoints = regionPoints;
-    }
-
-    public ArrayList<Double> getRegionPercent() {
-        return regionPercent;
-    }
-
-    public void setRegionPercent(ArrayList<Double> regionPercent) {
-        this.regionPercent = regionPercent;
-    }
-
     public long getTime() {
         return time;
     }
@@ -87,5 +70,15 @@ public class Game extends RealmObject {
         this.time = time;
     }
 
+
+    //For Mike's Regions
+    public RealmList<Region> getRegionList() {
+        return regionList;
+    }
+
+    public void setRegionList(RealmList<Region> billy){
+        this.regionList = billy;
+    }
+    //
 
 }

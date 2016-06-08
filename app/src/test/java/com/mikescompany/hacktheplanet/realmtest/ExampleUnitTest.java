@@ -1,4 +1,4 @@
-package android.realmtest.com.realmtest;
+package com.mikescompany.hacktheplanet.realmtest;
 
 import org.junit.Test;
 

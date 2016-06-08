@@ -1,4 +1,4 @@
-package android.realmtest.com.realmtest;
+package com.mikescompany.hacktheplanet;
 
 
 import io.realm.RealmObject;
