@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/LogGrowthText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Logistic Growth Equation With Changing Carrying Capacity"
+        android:textSize="30sp"/>
+
+    <EditText
+        android:id="@+id/LogGrowthEdit"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Insert Here"
+        android:textSize="30sp"/>
+
+    <TextView
+        android:id="@+id/SecurityText"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="30sp"
+        android:text="Security Equation that includes Security Values, Panic, Time, and Shuffle"/>
+
+    <EditText
+        android:id="@+id/SecurityEdit"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text="Insert Here"
+        android:textSize="30sp"/>
+
+
+    <!--<Button-->
+        <!--android:layout_width="150dp"-->
+        <!--android:layout_height="70dp"-->
+        <!--android:text="Recalculate Midpoint"-->
+        <!--android:layout_gravity="right"-->
+        <!--android:onClick="reCalcMid"/>-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Networking:"
+        android:id="@+id/NetworkingCoeff"
+        android:textSize="35sp"
+        android:layout_marginTop="25dp"/>
+    <!--android:layout_marginBottom="10dp"-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lethality:"
+        android:id="@+id/LethalityCoeff"
+        android:textSize="35sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Security:"
+        android:id="@+id/SecurityCoeff"
+        android:textSize="35sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TrueMid:"
+        android:id="@+id/TrueMid"
+        android:textSize="35sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CarryingCap:"
+        android:id="@+id/CarryingCap"
+        android:textSize="35sp"/>
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="200dp"
+        android:layout_height="150dp"
+        android:background="#000000"
+        android:textColor="#FFFFFF"
+        android:text="Time"
+        android:textSize="30sp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"/>
+
+
+
+
+</LinearLayout>
