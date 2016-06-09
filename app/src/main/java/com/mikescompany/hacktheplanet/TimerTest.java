@@ -215,14 +215,14 @@ import java.util.List;
              startActivity(new Intent(this, Upgrades.class));
              return true;
          }
-//         if (id == R.id.databaseTester) {
-//
-//             Intent intentData = new Intent(this, myDatabase.class);
+         if (id == R.id.databaseTester) {
+
+             Intent intentData = new Intent(this, MainActivity.class);
 //             intentData.putExtra("virus_Id", 0);
 //             intentData.putExtra("count", 0);
-//             startActivity(intentData);
-//             return true;
-//         }
+             startActivity(intentData);
+             return true;
+         }
 
          return super.onOptionsItemSelected(item);
      }

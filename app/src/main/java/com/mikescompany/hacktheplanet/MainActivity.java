@@ -90,9 +90,9 @@ public class MainActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
 
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        requestWindowFeature(Window.FEATURE_NO_TITLE);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 
         setContentView(R.layout.activity_main);
@@ -645,44 +645,49 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+
+    //MAKE SOMETHING THAT MAKES SURE THAT TIME DOESN'T RESET WHEN YOU LEAVE THE REALM ACTIVITIES (SAVE THEM IN REALM)//
+
+
+    /* Change this so that it brings you back to RealmTest Main Screen*/
     // Make the Screens Back Button go to the Main Screen
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event)  {
-        if (Integer.parseInt(android.os.Build.VERSION.SDK) > 5
-                && keyCode == KeyEvent.KEYCODE_BACK
-                && event.getRepeatCount() == 0) {
-            Log.d("CDA", "onKeyDown Called");
-            onBackPressed();
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
-
-    @Override
-    public void onBackPressed() {
-        Log.d("CDA", "onBackPressed Called");
-
-//        Intent intent = new Intent(this, MainActivity.class);
-//        startActivity(intent);
-
-        Log.d("Hit it", "Stop Fucking");
-
-        setContentView(R.layout.activity_main);
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Please Select A Realm So We Can Get On With The Show", Snackbar.LENGTH_SHORT)
-                        .setAction("Action", null).show();
-            }
-        });
-
-        suspended = true;
-    }
+//    @Override
+//    public boolean onKeyDown(int keyCode, KeyEvent event)  {
+//        if (Integer.parseInt(android.os.Build.VERSION.SDK) > 5
+//                && keyCode == KeyEvent.KEYCODE_BACK
+//                && event.getRepeatCount() == 0) {
+//            Log.d("CDA", "onKeyDown Called");
+//            onBackPressed();
+//            return true;
+//        }
+//        return super.onKeyDown(keyCode, event);
+//    }
+//
+//    @Override
+//    public void onBackPressed() {
+//        Log.d("CDA", "onBackPressed Called");
+//
+////        Intent intent = new Intent(this, MainActivity.class);
+////        startActivity(intent);
+//
+//        Log.d("Hit it", "Stop Fucking");
+//
+//        setContentView(R.layout.activity_main);
+//
+//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Snackbar.make(view, "Please Select A Realm So We Can Get On With The Show", Snackbar.LENGTH_SHORT)
+//                        .setAction("Action", null).show();
+//            }
+//        });
+//
+//        suspended = true;
+//    }
 
     public void resetGame(View view) {
 
