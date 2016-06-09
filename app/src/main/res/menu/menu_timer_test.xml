@@ -3,18 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.mikescompany.hacktheplanet.TimerTest">
 
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+    <!--<item-->
+        <!--android:id="@+id/action_settings"-->
+        <!--android:orderInCategory="100"-->
+        <!--android:title="@string/action_settings"-->
+        <!--app:showAsAction="never" />-->
     <item
         android:id="@+id/upgrades"
         android:title="Upgrade"/>
     <item
         android:id="@+id/databaseTester"
         android:title="Database"/>
-    <item
-        android:id="@+id/hexagonShit"
-        android:title="Hexagon"/>
+    <!--<item-->
+        <!--android:id="@+id/hexagonShit"-->
+        <!--android:title="Hexagon"/>-->
 </menu>
